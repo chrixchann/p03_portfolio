@@ -189,8 +189,9 @@ body,
 
 .scrollBanner {
   /* font-family: monospace; */
-  font-size: 0.95em;
+  font-size: 1.1em;
   align-self: center;
+  white-space: nowrap;
 }
 
 .projectGalleryGrid {
@@ -262,6 +263,7 @@ body,
 
 footer {
   padding: 2em;
+  padding-top: 3em;
   /* background-color: aquamarine; */
   height: 250px;
   display: flex;
@@ -349,7 +351,7 @@ footer ul li a:hover {
     width: 17em;
   }
   .scrollBanner {
-    font-size: 0.85em;
+    font-size: 1em;
   }
 
   .flexHeroLeft h1 {
@@ -371,7 +373,7 @@ footer ul li a:hover {
     width: 15em;
   }
   .scrollBanner {
-    font-size: 0.75em;
+    font-size: 0.85em;
   }
 
   .flexHeroLeft h1 {
