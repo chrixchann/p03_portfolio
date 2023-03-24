@@ -1,0 +1,440 @@
+/* VARIABLES */
+:root {
+  --border-color: #eee;
+}
+
+/* TYPOGRAPHY */
+
+/* STYLES */
+
+* {
+  font-family: "Inter", "sans-serif";
+  letter-spacing: -0.05em;
+  box-sizing: border-box;
+  /* max-width: 1280px; */
+}
+
+html {
+  /* https://www.w3schools.com/howto/howto_css_smooth_scroll.asp#section1 */
+  scroll-behavior: smooth;
+}
+
+body,
+.navbar,
+.flexHero,
+.projectGalleryGrid {
+  margin: auto;
+}
+
+.navbar,
+.flexHero,
+.projectGalleryGrid {
+  max-width: 1280px;
+  padding-left: 6em;
+  padding-right: 6em;
+}
+
+.heroContainer {
+  /* background-image: linear-gradient(
+      to bottom,
+      rgba(2, 0, 36, 0) 0%,
+      rgba(120, 120, 200, 0) 90%,
+      rgba(255, 255, 255, 1) 100%
+    ),
+    url("/img/bg1.png"); */
+  background-image: url("/img/bg1.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-bottom: 6em;
+  /* max-width: 1280px;
+  
+  padding: 0; */
+
+  color: white;
+}
+
+.navbar {
+  max-width: 1280px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3em 6em;
+}
+
+.navbar ul {
+  text-align: right;
+}
+
+.navbar ul li {
+  list-style: none;
+  display: inline-block;
+  margin-left: 2em;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: white;
+}
+
+/* navbar header */
+.navbar .pageTitle {
+  font-size: 1.3em;
+  font-weight: 600;
+}
+
+/* navbar links */
+.navbar ul li a {
+  font-size: 1.1em;
+}
+
+.flexHero {
+  margin: auto;
+  padding-top: 3em;
+
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-between;
+  max-width: 1280px;
+  /* justify-self: center; */
+}
+
+.flexHeroLeft {
+  display: flex;
+  flex-direction: column;
+  /* padding-right: 3em; */
+}
+
+.flexHeroLeft h1 {
+  margin-top: 0;
+  font-size: 2.5em;
+  width: 17em;
+}
+
+.flexHeroLeft p {
+  font-size: 1em;
+}
+
+.chrisImg {
+  border-radius: 0.2em;
+  width: 20em;
+  aspect-ratio: 4/5;
+  border-radius: 0.2em;
+  border: solid;
+  border-color: var(--border-color);
+  border-width: 0.01em;
+  /* https://freefrontend.com/css-image-effects/ */
+  box-shadow: 0 0 0 1px rgba(53, 72, 91, 0.07), 0 2px 2px rgba(0, 0, 0, 0.01),
+    0 4px 4px rgba(0, 0, 0, 0.02), 0 10px 8px rgba(0, 0, 0, 0.03),
+    0 15px 15px rgba(0, 0, 0, 0.03), 0 30px 30px rgba(0, 0, 0, 0.04),
+    0 70px 65px rgba(0, 0, 0, 0.05);
+}
+.bgSelect .images {
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: space-between; */
+  gap: 10px;
+}
+
+.bgSelect img {
+  width: 10em;
+  /* margin-right: 1em; */
+  border-radius: 0.2em;
+  border: solid;
+  border-color: var(--border-color);
+  border-width: 0.01em;
+  /* height: 10em; */
+  /* https://freefrontend.com/css-image-effects/ */
+  box-shadow: 0 0 0 1px rgba(53, 72, 91, 0.07), 0 2px 2px rgba(0, 0, 0, 0.01),
+    0 4px 4px rgba(0, 0, 0, 0.02), 0 10px 8px rgba(0, 0, 0, 0.03),
+    0 15px 15px rgba(0, 0, 0, 0.03), 0 30px 30px rgba(0, 0, 0, 0.04),
+    0 70px 65px rgba(0, 0, 0, 0.05);
+}
+
+.flexHeroRight {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  /* margin-left: auto; */
+}
+
+.scrollContainer {
+  overflow: hidden;
+  mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0) 0%,
+    rgb(0, 0, 0) 15%,
+    rgb(0, 0, 0) 85%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
+.scrollBanner {
+  /* font-family: monospace; */
+  font-size: 0.95em;
+  align-self: center;
+}
+
+.projectGalleryGrid {
+  /* width: 100%; */
+  margin-top: 6em;
+  margin-bottom: 7em;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3em;
+  color: black;
+}
+
+.projectCard {
+  font-family: "Poppins";
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 17em;
+  border: solid 1px var(--border-color);
+  border-radius: 8px;
+  box-shadow: 0 0 0 1px rgba(53, 72, 91, 0.07), 0 2px 2px rgba(0, 0, 0, 0.01),
+    0 4px 4px rgba(0, 0, 0, 0.02), 0 10px 8px rgba(0, 0, 0, 0.03),
+    0 15px 15px rgba(0, 0, 0, 0.03), 0 30px 30px rgba(0, 0, 0, 0.04),
+    0 70px 65px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+
+.projectCard img {
+  height: 100%;
+  flex-basis: 50%;
+  /* transform: translateX(-8em); */
+  /* position: relative;
+  left: -4em; */
+}
+
+.projectCard .projDetails {
+  flex-basis: 50%;
+  display: flex;
+  flex-direction: column;
+  /* width: 100%; */
+  padding: 1em 1em 2em 2em;
+
+  /* position: relative;
+  left: -4em; */
+}
+
+.projectCard h3 {
+  font-size: 1.3em;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+
+.projectCard h4 {
+  font-size: 1em;
+  font-weight: 500;
+  margin-top: 0.4em;
+}
+
+.projectCard p {
+  margin: 0;
+}
+
+.projectCard a {
+  margin-top: auto;
+  color: blue;
+  text-decoration: none;
+}
+
+footer {
+  padding: 2em;
+  /* background-color: aquamarine; */
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  color: black;
+  align-items: center;
+  gap: 1em;
+}
+
+footer .pageTitle {
+  font-size: 1.3em;
+  font-weight: 600;
+  text-decoration: none;
+  color: black;
+}
+
+footer ul li {
+  list-style: none;
+  display: inline-block;
+  justify-content: space-between;
+  margin-right: 3em;
+}
+
+footer ul li a {
+  color: black;
+  text-decoration: none;
+}
+
+footer .socials {
+  display: flex;
+  gap: 1.5em;
+}
+
+.socials img {
+  height: 35px;
+}
+
+/************************** ANIMATIONS ************************/
+
+.navbar ul li:hover {
+  text-decoration: underline;
+}
+footer ul li a:hover {
+  color: blue;
+  text-decoration: underline;
+}
+
+.bgSelect img:hover {
+  cursor: pointer;
+}
+
+/* https://blog.hubspot.com/website/scrolling-text-css */
+.scrollBanner {
+  -moz-transform: translateX(100%);
+  -webkit-transform: translateX(100%);
+  transform: translateX(100%);
+
+  -moz-animation: my-animation 6s linear infinite;
+  -webkit-animation: my-animation 6s linear infinite;
+  animation: my-animation 6s linear infinite;
+}
+
+@keyframes my-animation {
+  from {
+    -moz-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+  to {
+    -moz-transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+}
+
+/*********************************** MEDIA QUERIES **********************************************************/
+
+/* Extra large devices (large laptops and desktops, 1200px and down) */
+@media only screen and (max-width: 1200px) {
+  .chrisImg {
+    width: 17em;
+  }
+  .scrollContainer {
+    width: 17em;
+  }
+  .scrollBanner {
+    font-size: 0.85em;
+  }
+
+  .flexHeroLeft h1 {
+    font-size: 2em;
+    width: 15em;
+  }
+
+  .bgSelect img {
+    width: 8em;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and down) */
+@media only screen and (max-width: 1020px) {
+  .chrisImg {
+    width: 15em;
+  }
+  .scrollContainer {
+    width: 15em;
+  }
+  .scrollBanner {
+    font-size: 0.75em;
+  }
+
+  .flexHeroLeft h1 {
+    font-size: 1.7em;
+    width: 15em;
+  }
+
+  .flexHeroLeft p {
+    font-size: 0.9em;
+  }
+
+  .bgSelect img {
+    width: 7em;
+    /* aspect-ratio: 1/1; */
+  }
+
+  .projectCard {
+    height: 12rem;
+    font-size: 14px;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and down) */
+@media only screen and (max-width: 890px) {
+  .projectGalleryGrid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .projectCard img {
+    flex-basis: auto;
+  }
+}
+
+@media only screen and (max-width: 856px) {
+  .chrisImg {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 855px) {
+  .heroContainer {
+    padding-bottom: 4em;
+  }
+
+  .flexHeroLeft,
+  .flexHeroRight {
+    width: 100%;
+  }
+  .scrollContainer {
+    width: 100%;
+  }
+  .scrollBanner {
+    padding-top: 2em;
+    font-size: 0.9em;
+  }
+
+  .flexHeroLeft h1 {
+    font-size: 1.7em;
+    width: 100%;
+  }
+
+  .flexHeroLeft p {
+    font-size: 0.9em;
+  }
+
+  .bgSelect img {
+    width: 7em;
+    /* aspect-ratio: 1/1; */
+  }
+
+  .scrollBanner {
+    -moz-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+
+    -moz-animation: my-animation 9s linear infinite;
+    -webkit-animation: my-animation 9s linear infinite;
+    animation: my-animation 9s linear infinite;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+}
