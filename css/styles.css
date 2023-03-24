@@ -58,19 +58,24 @@ body,
   max-width: 1280px;
   margin: auto;
   display: flex;
-  align-items: center;
+  align-items: baseline;
   justify-content: space-between;
   padding: 3em 6em;
+
+  /* border: solid 2px var(--border-color); */
 }
 
 .navbar ul {
   text-align: right;
+  /* position: sticky; */
+  z-index: 100;
 }
 
 .navbar ul li {
   list-style: none;
   display: inline-block;
   margin-left: 2em;
+  
 }
 
 .navbar a {
@@ -82,11 +87,22 @@ body,
 .navbar .pageTitle {
   font-size: 1.3em;
   font-weight: 600;
+  white-space: nowrap;
 }
 
 /* navbar links */
 .navbar ul li a {
   font-size: 1.1em;
+}
+
+.navbar .hamburger{
+  display: none;
+  white-space: nowrap;
+
+}
+
+.navbar a.active{
+  font-weight: 900;
 }
 
 .flexHero {
@@ -205,6 +221,7 @@ body,
 .projectCard img {
   height: 100%;
   flex-basis: 50%;
+  flex-shrink: 1;
   /* transform: translateX(-8em); */
   /* position: relative;
   left: -4em; */
@@ -215,7 +232,7 @@ body,
   display: flex;
   flex-direction: column;
   /* width: 100%; */
-  padding: 1em 1em 2em 2em;
+  padding: .4em 1.5em 2em 1.7em;
 
   /* position: relative;
   left: -4em; */
@@ -252,6 +269,7 @@ footer {
   color: black;
   align-items: center;
   gap: 1em;
+  border-top: solid 2px #eee;
 }
 
 footer .pageTitle {
@@ -387,13 +405,12 @@ footer ul li a:hover {
   }
 }
 
+
 @media only screen and (max-width: 856px) {
   .chrisImg {
     display: none;
   }
-}
 
-@media only screen and (max-width: 855px) {
   .heroContainer {
     padding-bottom: 4em;
   }
@@ -436,5 +453,86 @@ footer ul li a:hover {
 }
 
 /* Small devices (portrait tablets and large phones, 600px and down) */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 615px) {
+  /* https://www.w3schools.com/howto/howto_js_topnav_responsive.asp */
+
+    /* https://www.w3schools.com/howto/howto_js_topnav_responsive.asp */
+    .navbar ul li {
+      display: none;
+    }
+    .navbar a.hamburger {
+      display: inline;
+      font-size: 1.6em;
+      order: 1;
+    }
+  
+    .navbar{
+      padding-bottom: 0;
+      flex-wrap: nowrap;
+    }
+  .navbar.responsive {
+    position: relative;
+  }
+
+.mobileNavBorder{
+  z-index: 0;
+  position: absolute;
+  top: 3.75em;
+  right: 5.35em;
+  border: solid 1px var(--border-color);
+  border-radius: 8px;
+  width: 2.5em;
+  height: 2.5em;
+
+}
+
+.navbar.responsive .mobileNavBorder{
+  width: 5.8em;
+  height: 9.3em;
+}
+
+
+  .navbar.responsive ul{
+    display: flex;
+    flex-direction:column;
+    gap: .8em;
+
+  }
+
+  .navbar.responsive ul a.hamburger{
+    /* position: relative; */
+    order: 1;
+  }
+
+  .navbar.responsive ul li:first-child {
+    /* position: relative; */
+    order: 2;
+  }
+  .navbar.responsive ul li:nth-child(2) {
+    /* position: relative; */
+    order: 3;
+  }
+  .navbar.responsive ul li:nth-child(3) {
+    /* position: relative; */
+    order: 4;
+  }
+
+  .navbar.responsive a{
+    float: none;
+    display: block;
+    /* flex-direction: column; */
+    text-align: right;
+
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .projectCard{
+    flex-direction: column;
+    height: fit-content;
+  }
+  .projectCard img{
+    width: 100%;
+  }
+
 }

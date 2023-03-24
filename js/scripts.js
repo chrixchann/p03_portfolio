@@ -50,3 +50,13 @@ mountainButton.addEventListener("click", () => {
 //         'url("/img/milky_way_sky-1920x1080.jpg")';
 //   }
 // }
+
+//hamburger menu 
+function hamburger() {
+  var x = document.getElementById("topNavbar");
+  if (x.className === "navbar") {
+    x.className += " responsive";
+  } else {
+    x.className = "navbar";
+  }
+} 
