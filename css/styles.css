@@ -1,6 +1,12 @@
 /* VARIABLES */
 :root {
   --border-color: #eee;
+  --dark-border-color: #000000;
+  --blue-highlight: blue;
+}
+
+::-moz-scrollbar {
+  display: none;
 }
 
 /* TYPOGRAPHY */
@@ -11,6 +17,7 @@
   font-family: "Inter", "sans-serif";
   letter-spacing: -0.05em;
   box-sizing: border-box;
+  overflow: overlay;
   /* max-width: 1280px; */
 }
 
@@ -55,7 +62,7 @@ body,
 }
 
 .aboutHeroContainer {
-  color: black;
+  color: var(--dark-border-color);
 }
 
 .navbar {
@@ -65,14 +72,29 @@ body,
   align-items: baseline;
   justify-content: space-between;
   padding: 3em 6em;
+  white-space: nowrap;
 
   /* border: solid 2px var(--border-color); */
+}
+
+.navBorder {
+  z-index: 0;
+  position: absolute;
+  top: 3.5em;
+  right: 6em;
+  border: solid 1px var(--border-color);
+  border-radius: 8px;
+  width: 16.15em;
+  height: 2.5em;
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 .navbar ul {
   text-align: right;
   /* position: sticky; */
   z-index: 100;
+  padding-left: 30px;
+  margin-right: 0.65em;
 }
 
 .navbar ul li {
@@ -110,7 +132,6 @@ body,
 .flexHero {
   margin: auto;
   padding-top: 3em;
-
   display: flex;
   flex-wrap: wrap;
   width: 100%;
@@ -304,13 +325,49 @@ footer .socials {
   height: 35px;
 }
 
+/**************************** ABOUT *******************************/
+.aboutHeroContainer .navBorder {
+  border-color: var(--dark-border-color);
+}
+
+/**************************** BURB *****************************/
+.burbHeroContainer {
+  /* background-image: linear-gradient(
+      to bottom,
+      rgba(2, 0, 36, 0) 0%,
+      rgba(120, 120, 200, 0) 90%,
+      rgba(255, 255, 255, 1) 100%
+    ),
+    url("/img/bg1.png"); */
+  background-image: url("/img/burb/burb-hero.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-bottom: 6em;
+  /* max-width: 1280px;
+  
+  padding: 0; */
+
+  color: white;
+}
+
+.burbLogotype {
+  margin-bottom: 2.5em;
+}
+
 /************************** ANIMATIONS ************************/
 
 .navbar ul li:hover {
   text-decoration: underline;
 }
+
+.aboutHeroContainer .navbar ul li:hover {
+  color: var(--blue-highlight);
+  text-decoration: underline;
+}
+
 footer ul li a:hover {
-  color: blue;
+  color: var(--blue-highlight);
   text-decoration: underline;
 }
 
@@ -343,6 +400,15 @@ footer ul li a:hover {
 }
 
 /*********************************** MEDIA QUERIES **********************************************************/
+
+@media only screen and (min-width: 1280px) {
+  .navBorder {
+    right: calc(5.55em + (100vw - 1280px) / 2);
+  }
+  /* .aboutHeroContainer .navBorder {
+    right: calc(5.55em + (100vw - 1280px) / 2);
+  } */
+}
 
 /* Extra large devices (large laptops and desktops, 1200px and down) */
 @media only screen and (max-width: 1200px) {
@@ -459,11 +525,15 @@ footer ul li a:hover {
 @media only screen and (max-width: 615px) {
   /* https://www.w3schools.com/howto/howto_js_topnav_responsive.asp */
 
+  .navBorder {
+    display: none;
+  }
+
   .navbar ul li a {
     display: none;
   }
   .navbar a.hamburger {
-    display: inline;
+    display: inline-block;
     font-size: 1.6em;
     order: 1;
   }
@@ -480,11 +550,16 @@ footer ul li a:hover {
     z-index: 0;
     position: absolute;
     top: 3.75em;
-    right: 5.35em;
+    right: 6em;
     border: solid 1px var(--border-color);
     border-radius: 8px;
     width: 2.5em;
     height: 2.5em;
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+
+  .aboutHeroContainer .mobileNavBorder {
+    border-color: var(--dark-border-color);
   }
 
   .navbar.responsive .mobileNavBorder {
