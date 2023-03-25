@@ -1,6 +1,6 @@
 let currentBackground = 1;
 
-var backgroundContainer = document.querySelector(".heroContainer");
+var backgroundContainer = document.querySelector(".indexHeroContainer");
 
 const oceanButton = document.getElementById("bg1");
 const rosemaryButton = document.getElementById("bg2");
