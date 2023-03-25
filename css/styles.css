@@ -37,8 +37,8 @@ body,
 .flexHero,
 .projectGalleryGrid {
   max-width: 1280px;
-  padding-left: 6em;
-  padding-right: 6em;
+  padding-left: 5em;
+  padding-right: 5em;
 }
 
 .indexHeroContainer {
@@ -71,7 +71,8 @@ body,
   display: flex;
   align-items: baseline;
   justify-content: space-between;
-  padding: 3em 6em;
+  padding-top: 3em;
+  padding-bottom: 3em;
   white-space: nowrap;
 
   /* border: solid 2px var(--border-color); */
@@ -81,7 +82,7 @@ body,
   z-index: 0;
   position: absolute;
   top: 3.5em;
-  right: 6em;
+  right: 5.02em;
   border: solid 1px var(--border-color);
   border-radius: 8px;
   width: 16.15em;
@@ -93,7 +94,7 @@ body,
   text-align: right;
   /* position: sticky; */
   z-index: 100;
-  padding-left: 30px;
+  padding-left: 0;
   margin-right: 0.65em;
 }
 
@@ -308,7 +309,7 @@ footer ul li {
   list-style: none;
   display: inline-block;
   justify-content: space-between;
-  margin-right: 3em;
+  margin-right: 2em;
 }
 
 footer ul li a {
@@ -403,7 +404,7 @@ footer ul li a:hover {
 
 @media only screen and (min-width: 1280px) {
   .navBorder {
-    right: calc(5.55em + (100vw - 1280px) / 2);
+    right: calc(5.02em + (100vw - 1280px) / 2);
   }
   /* .aboutHeroContainer .navBorder {
     right: calc(5.55em + (100vw - 1280px) / 2);
@@ -429,6 +430,9 @@ footer ul li a:hover {
 
   .bgSelect img {
     width: 8em;
+  }
+  .burbLogotype {
+    width: 250px;
   }
 }
 
@@ -461,6 +465,10 @@ footer ul li a:hover {
   .projectCard {
     height: 12rem;
     font-size: 14px;
+  }
+
+  .burbLogotype {
+    width: 230px;
   }
 }
 
@@ -523,6 +531,13 @@ footer ul li a:hover {
 
 /* Small devices (portrait tablets and large phones, 600px and down) */
 @media only screen and (max-width: 615px) {
+  .navbar,
+  .flexHero,
+  .projectGalleryGrid {
+    max-width: 1280px;
+    padding-left: 3em;
+    padding-right: 3em;
+  }
   /* https://www.w3schools.com/howto/howto_js_topnav_responsive.asp */
 
   .navBorder {
@@ -550,7 +565,7 @@ footer ul li a:hover {
     z-index: 0;
     position: absolute;
     top: 3.75em;
-    right: 6em;
+    right: 3.02em;
     border: solid 1px var(--border-color);
     border-radius: 8px;
     width: 2.5em;
@@ -596,6 +611,10 @@ footer ul li a:hover {
     display: block;
     /* flex-direction: column; */
     text-align: right;
+  }
+
+  .burbLogotype {
+    width: 200px;
   }
 }
 
