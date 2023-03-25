@@ -362,8 +362,8 @@ footer .socials {
   text-decoration: underline;
 }
 
-.aboutHeroContainer .navbar ul li:hover {
-  color: var(--blue-highlight);
+.burbHeroContainer .navbar ul li:hover {
+  /* color: var(--blue-highlight); */
   text-decoration: underline;
 }
 
