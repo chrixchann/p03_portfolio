@@ -54,7 +54,7 @@ body,
   color: white;
 }
 
-.aboutHeroContainer{
+.aboutHeroContainer {
   color: black;
 }
 
@@ -79,7 +79,6 @@ body,
   list-style: none;
   display: inline-block;
   margin-left: 2em;
-  
 }
 
 .navbar a {
@@ -99,13 +98,12 @@ body,
   font-size: 1.1em;
 }
 
-.navbar .hamburger{
+.navbar .hamburger {
   display: none;
   white-space: nowrap;
-
 }
 
-.navbar a.active{
+.navbar a.active {
   font-weight: 900;
 }
 
@@ -237,7 +235,7 @@ body,
   display: flex;
   flex-direction: column;
   /* width: 100%; */
-  padding: .4em 1.5em 2em 1.7em;
+  padding: 0.4em 1.5em 2em 1.7em;
 
   /* position: relative;
   left: -4em; */
@@ -411,7 +409,6 @@ footer ul li a:hover {
   }
 }
 
-
 @media only screen and (max-width: 856px) {
   .chrisImg {
     display: none;
@@ -458,54 +455,54 @@ footer ul li a:hover {
   }
 }
 
+@media only screen and (max-width: 616px) {
+  /* https://www.w3schools.com/howto/howto_js_topnav_responsive.asp */
+
+  .navbar ul li a {
+    display: none;
+  }
+  .navbar a.hamburger {
+    display: inline;
+    font-size: 1.6em;
+    order: 1;
+  }
+
+  .navbar {
+    padding-bottom: 0;
+  }
+}
+
 /* Small devices (portrait tablets and large phones, 600px and down) */
 @media only screen and (max-width: 615px) {
   /* https://www.w3schools.com/howto/howto_js_topnav_responsive.asp */
 
-    /* https://www.w3schools.com/howto/howto_js_topnav_responsive.asp */
-    .navbar ul li {
-      display: none;
-    }
-    .navbar a.hamburger {
-      display: inline;
-      font-size: 1.6em;
-      order: 1;
-    }
-  
-    .navbar{
-      padding-bottom: 0;
-      flex-wrap: nowrap;
-    }
-  .navbar.responsive {
+  .navbar.responsive ul li {
     position: relative;
   }
 
-.mobileNavBorder{
-  z-index: 0;
-  position: absolute;
-  top: 3.75em;
-  right: 5.35em;
-  border: solid 1px var(--border-color);
-  border-radius: 8px;
-  width: 2.5em;
-  height: 2.5em;
-
-}
-
-.navbar.responsive .mobileNavBorder{
-  width: 5.8em;
-  height: 9.3em;
-}
-
-
-  .navbar.responsive ul{
-    display: flex;
-    flex-direction:column;
-    gap: .8em;
-
+  .mobileNavBorder {
+    z-index: 0;
+    position: absolute;
+    top: 3.75em;
+    right: 5.35em;
+    border: solid 1px var(--border-color);
+    border-radius: 8px;
+    width: 2.5em;
+    height: 2.5em;
   }
 
-  .navbar.responsive ul a.hamburger{
+  .navbar.responsive .mobileNavBorder {
+    width: 5.8em;
+    height: 9.3em;
+  }
+
+  .navbar.responsive ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8em;
+  }
+
+  .navbar.responsive ul a.hamburger {
     /* position: relative; */
     order: 1;
   }
@@ -523,22 +520,20 @@ footer ul li a:hover {
     order: 4;
   }
 
-  .navbar.responsive a{
+  .navbar.responsive a {
     float: none;
     display: block;
     /* flex-direction: column; */
     text-align: right;
-
   }
 }
 
 @media only screen and (max-width: 500px) {
-  .projectCard{
+  .projectCard {
     flex-direction: column;
     height: fit-content;
   }
-  .projectCard img{
+  .projectCard img {
     width: 100%;
   }
-
 }
