@@ -5,9 +5,10 @@
   --blue-highlight: blue;
 }
 
-::-moz-scrollbar {
+/* html::-moz-scrollbar,
+html::-webkit-scrollbar {
   display: none;
-}
+} */
 
 /* TYPOGRAPHY */
 
@@ -127,7 +128,7 @@ body,
 }
 
 .navbar a.active {
-  font-weight: 900;
+  font-weight: 600;
 }
 
 .flexHero {
@@ -151,6 +152,13 @@ body,
   margin-top: 0;
   font-size: 2.5em;
   width: 17em;
+  font-weight: 500;
+}
+
+@supports (-moz-appearance: meterbar) {
+  .flexHeroLeft h1 {
+    font-weight: 700;
+  }
 }
 
 .flexHeroLeft p {
@@ -202,7 +210,16 @@ body,
 
 .scrollContainer {
   overflow: hidden;
+  -webkit-overflow: hidden;
+
   mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0) 0%,
+    rgb(0, 0, 0) 15%,
+    rgb(0, 0, 0) 85%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  -webkit-mask-image: linear-gradient(
     to right,
     rgba(0, 0, 0, 0) 0%,
     rgb(0, 0, 0) 15%,
@@ -240,6 +257,10 @@ body,
     0 4px 4px rgba(0, 0, 0, 0.02), 0 10px 8px rgba(0, 0, 0, 0.03),
     0 15px 15px rgba(0, 0, 0, 0.03), 0 30px 30px rgba(0, 0, 0, 0.04),
     0 70px 65px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 0 0 1px rgba(53, 72, 91, 0.07), 0 2px 2px rgba(0, 0, 0, 0.01),
+    0 4px 4px rgba(0, 0, 0, 0.02), 0 10px 8px rgba(0, 0, 0, 0.03),
+    0 15px 15px rgba(0, 0, 0, 0.03), 0 30px 30px rgba(0, 0, 0, 0.04),
+    0 70px 65px rgba(0, 0, 0, 0.05);
   overflow: hidden;
 }
 
@@ -265,7 +286,7 @@ body,
 
 .projectCard h3 {
   font-size: 1.3em;
-  font-weight: 700;
+  font-weight: 600;
   margin-bottom: 0;
 }
 
@@ -401,14 +422,20 @@ footer ul li a:hover {
 }
 
 /*********************************** MEDIA QUERIES **********************************************************/
-
-@media only screen and (min-width: 1280px) {
-  .navBorder {
-    right: calc(5.02em + (100vw - 1280px) / 2);
+@supports (-webkit-appearance: none) {
+  @media all and (-webkit-min-device-pixel-ratio: 0) and (min-width: 1280px) {
+    .navBorder {
+      right: calc(5.02em + (100vw - 1280px) / 2);
+    }
   }
-  /* .aboutHeroContainer .navBorder {
-    right: calc(5.55em + (100vw - 1280px) / 2);
-  } */
+}
+
+@supports (-moz-appearance: meterbar) {
+  @media only screen and (min-width: 1280px) {
+    .navBorder {
+      right: calc(4.52em + (100vw - 1280px) / 2);
+    }
+  }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and down) */
@@ -564,8 +591,8 @@ footer ul li a:hover {
   .mobileNavBorder {
     z-index: 0;
     position: absolute;
-    top: 3.75em;
-    right: 3.02em;
+    top: 3.6em;
+    right: 3.07em;
     border: solid 1px var(--border-color);
     border-radius: 8px;
     width: 2.5em;
@@ -615,6 +642,15 @@ footer ul li a:hover {
 
   .burbLogotype {
     width: 200px;
+  }
+}
+
+@supports (-moz-appearance: meterbar) {
+  @media only screen and (max-width: 615px) {
+    .mobileNavBorder {
+      top: 3.75em;
+      right: 3.02em;
+    }
   }
 }
 
