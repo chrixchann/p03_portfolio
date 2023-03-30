@@ -1,8 +1,12 @@
 /* VARIABLES */
 :root {
+  text-rendering: optimizeLegibility;
+
   --border-color: #eee;
   --dark-border-color: #000000;
   --blue-highlight: blue;
+  --faded-text: #8c8c8c;
+  --row-color: #e3e3ee;
 }
 
 /* html::-moz-scrollbar,
@@ -30,13 +34,15 @@ html {
 body,
 .navbar,
 .flexHero,
-.projectGalleryGrid {
+.projectGalleryGrid,
+.writeUp {
   margin: auto;
 }
 
 .navbar,
 .flexHero,
-.projectGalleryGrid {
+.projectGalleryGrid,
+.writeUp {
   max-width: 1280px;
   padding-left: 5em;
   padding-right: 5em;
@@ -54,7 +60,7 @@ body,
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  padding-bottom: 6em;
+  padding-bottom: 2em;
   /* max-width: 1280px;
   
   padding: 0; */
@@ -133,7 +139,8 @@ body,
 
 .flexHero {
   margin: auto;
-  padding-top: 3em;
+  margin-top: 0;
+  padding-top: 1.5em;
   display: flex;
   flex-wrap: wrap;
   width: 100%;
@@ -237,16 +244,21 @@ body,
 }
 
 .mobileScrollTip {
-  display: none;
-  padding-top: 2em;
+  /* display: none; */
+  padding-top: 3.5em;
   flex: 0 0 100%;
   text-align: center;
   margin-bottom: 0;
 }
 
+.mobileScrollTip img {
+  width: 1.5em;
+}
+
 .mobileScrollTip p {
   letter-spacing: 0.3em;
   margin-bottom: 0.8em;
+  font-weight: 700;
 }
 
 .projectGalleryGrid {
@@ -313,6 +325,10 @@ body,
 .projectCard p {
   margin: 0;
 }
+.categories {
+  color: var(--faded-text);
+  margin-top: 2em;
+}
 
 .projectCard a {
   margin-top: auto;
@@ -366,6 +382,76 @@ footer .socials {
   border-color: var(--dark-border-color);
 }
 
+/**************************** PROJECTS
+*****************************/
+
+.writeUp {
+  margin-top: 3em;
+  margin-bottom: 2em;
+  font-size: 1.4em;
+  padding-left: 8em;
+  padding-right: 8em;
+  display: flex;
+  flex-direction: column;
+  gap: 3em;
+}
+
+.writeUp img {
+  width: 100%;
+}
+
+.flexElement {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.projInfoList {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 3em;
+  /* border-bottom: 2px solid var(--row-color); */
+}
+
+.projInfo {
+  display: flex;
+  flex-direction: row;
+  border-bottom: 2px solid var(--row-color);
+  /* padding-top: 0; */
+}
+
+.projInfo h3 {
+  width: 30%;
+  flex-shrink: 0;
+}
+
+.projInfo p {
+  vertical-align: baseline;
+}
+
+.projSection {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.projSection h1 {
+  width: 100%;
+}
+
+.projSection p {
+  width: 65%;
+  margin: 0;
+}
+
+.projSection .comments {
+  width: 25%;
+  margin-left: auto;
+  font-family: serif;
+  color: rgb(0, 131, 76);
+}
+
 /**************************** BURB *****************************/
 .burbHeroContainer {
   /* background-image: linear-gradient(
@@ -375,11 +461,11 @@ footer .socials {
       rgba(255, 255, 255, 1) 100%
     ),
     url("/img/bg1.png"); */
-  background-image: url("/img/burb/burb-hero.jpg");
+  background-image: url("/img/burb/burb-hero.png");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  padding-bottom: 6em;
+  padding-bottom: 2em;
   /* max-width: 1280px;
   
   padding: 0; */
@@ -388,7 +474,23 @@ footer .socials {
 }
 
 .burbLogotype {
-  margin-bottom: 2.5em;
+  margin-bottom: 0.5em;
+  margin-top: 2.5em;
+}
+
+.burbHeroImg {
+  border-radius: 0.2em;
+  width: 100%;
+  /* aspect-ratio: 4/5; */
+  border-radius: 0.2em;
+  border: solid;
+  border-color: var(--border-color);
+  border-width: 0.01em;
+  /* https://freefrontend.com/css-image-effects/ */
+  box-shadow: 0 0 0 1px rgba(53, 72, 91, 0.07), 0 2px 2px rgba(0, 0, 0, 0.01),
+    0 4px 4px rgba(0, 0, 0, 0.02), 0 10px 8px rgba(0, 0, 0, 0.03),
+    0 15px 15px rgba(0, 0, 0, 0.03), 0 30px 30px rgba(0, 0, 0, 0.04),
+    0 70px 65px rgba(0, 0, 0, 0.05);
 }
 
 /************************** ANIMATIONS ************************/
@@ -662,9 +764,9 @@ footer ul li a:hover {
     width: 200px;
   }
 
-  .mobileScrollTip {
+  /* .mobileScrollTip {
     display: block;
-  }
+  } */
 }
 
 @supports (-moz-appearance: meterbar) {
