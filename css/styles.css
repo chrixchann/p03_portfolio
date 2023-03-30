@@ -48,6 +48,10 @@ body,
   padding-right: 5em;
 }
 
+.about {
+  color: black;
+}
+
 .indexHeroContainer {
   /* background-image: linear-gradient(
       to bottom,
@@ -243,6 +247,63 @@ body,
   overflow: hidden;
 }
 
+.contactButton {
+  appearance: none;
+  background-color: #fafbfc;
+  border: 1px solid rgba(27, 31, 35, 0.15);
+  border-radius: 6px;
+  box-shadow: rgba(27, 31, 35, 0.04) 0 1px 0,
+    rgba(255, 255, 255, 0.25) 0 1px 0 inset;
+  /* box-sizing: border-box; */
+  color: #24292e;
+  cursor: pointer;
+  display: inline-block;
+  /* font-size: 14px; */
+  /* font-weight: 500; */
+  line-height: 20px;
+  /* list-style: none; */
+  padding: 6px 16px;
+  /* position: relative; */
+  transition: background-color 0.2s cubic-bezier(0.3, 0, 0.5, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  white-space: nowrap;
+  word-wrap: break-word;
+}
+
+.contactButton:hover {
+  background-color: #f3f4f6;
+  text-decoration: none;
+  transition-duration: 0.1s;
+}
+
+/* .contactButton:disabled {
+  background-color: #fafbfc;
+  border-color: rgba(27, 31, 35, 0.15);
+  color: #959da5;
+  cursor: default;
+} */
+
+.contactButton:active {
+  background-color: #edeff2;
+  box-shadow: rgba(225, 228, 232, 0.2) 0 1px 0 inset;
+  transition: none 0s;
+}
+
+.contactButton:focus {
+  outline: 1px transparent;
+}
+
+.contactButton:before {
+  display: none;
+}
+
+.contactButton:-webkit-details-marker {
+  display: none;
+}
+
 .mobileScrollTip {
   /* display: none; */
   padding-top: 3.5em;
@@ -279,14 +340,14 @@ body,
   height: 17em;
   border: solid 1px var(--border-color);
   border-radius: 8px;
-  box-shadow: 0 0 0 1px rgba(53, 72, 91, 0.07), 0 2px 2px rgba(0, 0, 0, 0.01),
+  /* box-shadow: 0 0 0 1px rgba(53, 72, 91, 0.07), 0 2px 2px rgba(0, 0, 0, 0.01),
     0 4px 4px rgba(0, 0, 0, 0.02), 0 10px 8px rgba(0, 0, 0, 0.03),
     0 15px 15px rgba(0, 0, 0, 0.03), 0 30px 30px rgba(0, 0, 0, 0.04),
-    0 70px 65px rgba(0, 0, 0, 0.05);
-  box-shadow: 0 0 0 1px rgba(53, 72, 91, 0.07), 0 2px 2px rgba(0, 0, 0, 0.01),
-    0 4px 4px rgba(0, 0, 0, 0.02), 0 10px 8px rgba(0, 0, 0, 0.03),
-    0 15px 15px rgba(0, 0, 0, 0.03), 0 30px 30px rgba(0, 0, 0, 0.04),
-    0 70px 65px rgba(0, 0, 0, 0.05);
+    0 70px 65px rgba(0, 0, 0, 0.05); */
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px,
+    rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px,
+    rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+
   overflow: hidden;
 }
 
@@ -337,7 +398,6 @@ body,
 }
 
 footer {
-  padding: 2em;
   padding-top: 3em;
   /* background-color: aquamarine; */
   height: 250px;
@@ -347,6 +407,7 @@ footer {
   align-items: center;
   gap: 1em;
   border-top: solid 2px #eee;
+  margin-bottom: 2em;
 }
 
 footer .pageTitle {
@@ -380,6 +441,37 @@ footer .socials {
 /**************************** ABOUT *******************************/
 .aboutHeroContainer .navBorder {
   border-color: var(--dark-border-color);
+}
+
+.about h2 {
+  width: auto;
+  margin-top: 0;
+}
+
+.about .flexHero {
+  justify-content: space-between;
+  gap: 4em;
+  margin-bottom: 3em;
+}
+
+.about .flexHeroLeft {
+  flex: 2;
+  font-size: 1.3em;
+}
+
+.about .flexHeroRight {
+  flex: 3;
+}
+
+.about .flexHeroRight img {
+  width: 100%;
+  border-radius: 0.4em;
+  border: solid;
+  border-color: var(--border-color);
+  border-width: 0.01em;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px,
+    rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px,
+    rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
 }
 
 /**************************** PROJECTS
@@ -450,6 +542,12 @@ footer .socials {
   margin-left: auto;
   font-family: serif;
   color: rgb(0, 131, 76);
+}
+
+.projGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5em;
 }
 
 /**************************** BURB *****************************/
