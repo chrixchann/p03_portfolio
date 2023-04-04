@@ -11,7 +11,8 @@ oceanButton.addEventListener("click", () => {
   //     return;
   //   } else {
   //     currentBackground = 1;
-  backgroundContainer.style.backgroundImage = 'url("/img/bg1.png")';
+  backgroundContainer.style.backgroundImage = "url(img/bg1.png)";
+  console.log(backgroundContainer);
   //   }
 });
 
@@ -20,7 +21,9 @@ rosemaryButton.addEventListener("click", () => {
   //     return;
   //   } else {
   //   currentBackground = 2;
-  backgroundContainer.style.backgroundImage = 'url("/img/bg2.jpg")';
+  backgroundContainer.style.backgroundImage = "url(img/bg2.jpg)";
+  console.log("changed to bg2");
+
   //   }
 });
 mountainButton.addEventListener("click", () => {
@@ -28,7 +31,9 @@ mountainButton.addEventListener("click", () => {
   //     return;
   //   } else {
   //   currentBackground = 2;
-  backgroundContainer.style.backgroundImage = 'url("/img/bg3.jpg")';
+  backgroundContainer.style.backgroundImage = "url(img/bg3.jpg)";
+  console.log("changed to bg3");
+
   //   }
 });
 
@@ -39,19 +44,19 @@ mountainButton.addEventListener("click", () => {
 //   switch (bg) {
 //     case 1:
 //       currentBackground = 1;
-//       backgroundContainer.background = "url('/img/oceanbluegreen.png')";
+//       backgroundContainer.background = "url('../img/oceanbluegreen.png')";
 //     case 2:
 //       currentBackground = 2;
-//       backgroundContainer.background = 'url("/img/rosemary.jpg")';
+//       backgroundContainer.background = 'url("../img/rosemary.jpg")';
 
 //     case 3:
 //       currentBackground = 3;
 //       backgroundContainer.background =
-//         'url("/img/milky_way_sky-1920x1080.jpg")';
+//         'url("../img/milky_way_sky-1920x1080.jpg")';
 //   }
 // }
 
-//hamburger menu 
+//hamburger menu
 function hamburger() {
   var x = document.getElementById("topNavbar");
   if (x.className === "navbar") {
@@ -59,4 +64,4 @@ function hamburger() {
   } else {
     x.className = "navbar";
   }
-} 
+}

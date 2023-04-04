@@ -1,5 +1,6 @@
 :root {
   text-rendering: optimizeLegibility;
+
   --border-color: #eee;
   --dark-border-color: #000000;
   --blue-highlight: blue;
@@ -7,8 +8,37 @@
   --row-color: #e3e3ee;
 }
 
+// MIXINS
+@mixin heroBGImg {
+  background: {
+    position: center;
+    size: cover;
+    repeat: no-repeat;
+  }
+  padding-bottom: 2em;
+}
+
+@mixin boxShadow1 {
+  /* https://freefrontend.com/css-image-effects/ */
+  box-shadow: 0 0 0 1px rgba(53, 72, 91, 0.07), 0 2px 2px rgba(0, 0, 0, 0.01),
+    0 4px 4px rgba(0, 0, 0, 0.02), 0 10px 8px rgba(0, 0, 0, 0.03),
+    0 15px 15px rgba(0, 0, 0, 0.03), 0 30px 30px rgba(0, 0, 0, 0.04),
+    0 70px 65px rgba(0, 0, 0, 0.05);
+}
+
+@mixin defBorder {
+  @include boxShadow1();
+  border: solid {
+    radius: 0.2em;
+    color: var(--border-color);
+    width: 0.01em;
+  }
+}
+
 /* TYPOGRAPHY */
+
 /* STYLES */
+
 * {
   font-family: "Inter", "sans-serif";
   letter-spacing: -0.05em;
@@ -44,11 +74,10 @@ body,
 }
 
 .indexHeroContainer {
-  background-image: url("../img/bg1.png");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  padding-bottom: 2em;
+  background: {
+    image: url("../img/bg1.png");
+  }
+  @include heroBGImg;
   color: white;
 }
 
@@ -65,6 +94,7 @@ body,
   padding-top: 3em;
   padding-bottom: 3em;
   white-space: nowrap;
+
   /* border: solid 2px var(--border-color); */
 }
 
@@ -158,14 +188,8 @@ body,
 .chrisImg {
   width: 20em;
   aspect-ratio: 4/5;
-  /* https://freefrontend.com/css-image-effects/ */
-  box-shadow: 0 0 0 1px rgba(53, 72, 91, 0.07), 0 2px 2px rgba(0, 0, 0, 0.01), 0 4px 4px rgba(0, 0, 0, 0.02), 0 10px 8px rgba(0, 0, 0, 0.03), 0 15px 15px rgba(0, 0, 0, 0.03), 0 30px 30px rgba(0, 0, 0, 0.04), 0 70px 65px rgba(0, 0, 0, 0.05);
-  border: solid;
-  border-radius: 0.2em;
-  border-color: var(--border-color);
-  border-width: 0.01em;
+  @include defBorder();
 }
-
 .bgSelect .images {
   display: flex;
   flex-wrap: wrap;
@@ -176,12 +200,7 @@ body,
 .bgSelect img {
   width: 10em;
   /* margin-right: 1em; */
-  /* https://freefrontend.com/css-image-effects/ */
-  box-shadow: 0 0 0 1px rgba(53, 72, 91, 0.07), 0 2px 2px rgba(0, 0, 0, 0.01), 0 4px 4px rgba(0, 0, 0, 0.02), 0 10px 8px rgba(0, 0, 0, 0.03), 0 15px 15px rgba(0, 0, 0, 0.03), 0 30px 30px rgba(0, 0, 0, 0.04), 0 70px 65px rgba(0, 0, 0, 0.05);
-  border: solid;
-  border-radius: 0.2em;
-  border-color: var(--border-color);
-  border-width: 0.01em;
+  @include defBorder();
 }
 
 .flexHeroRight {
@@ -194,8 +213,21 @@ body,
 .scrollContainer {
   overflow: hidden;
   -webkit-overflow: hidden;
-  mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, black 15%, black 85%, rgba(0, 0, 0, 0) 100%);
-  -webkit-mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, black 15%, black 85%, rgba(0, 0, 0, 0) 100%);
+
+  mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0) 0%,
+    rgb(0, 0, 0) 15%,
+    rgb(0, 0, 0) 85%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0) 0%,
+    rgb(0, 0, 0) 15%,
+    rgb(0, 0, 0) 85%,
+    rgba(0, 0, 0, 0) 100%
+  );
 }
 
 .scrollBanner {
@@ -206,13 +238,14 @@ body,
   overflow: hidden;
   width: fit-content;
 }
-
+// https://getcssscan.com/css-buttons-examples
 .contactButton {
   appearance: none;
   background-color: #fafbfc;
   border: 1px solid rgba(27, 31, 35, 0.15);
   border-radius: 6px;
-  box-shadow: rgba(27, 31, 35, 0.04) 0 1px 0, rgba(255, 255, 255, 0.25) 0 1px 0 inset;
+  box-shadow: rgba(27, 31, 35, 0.04) 0 1px 0,
+    rgba(255, 255, 255, 0.25) 0 1px 0 inset;
   /* box-sizing: border-box; */
   color: #24292e;
   cursor: pointer;
@@ -244,6 +277,7 @@ body,
   color: #959da5;
   cursor: default;
 } */
+
 .contactButton:active {
   background-color: #edeff2;
   box-shadow: rgba(225, 228, 232, 0.2) 0 1px 0 inset;
@@ -296,12 +330,8 @@ body,
   flex-direction: row;
   width: 100%;
   height: 17em;
-  /* https://freefrontend.com/css-image-effects/ */
-  box-shadow: 0 0 0 1px rgba(53, 72, 91, 0.07), 0 2px 2px rgba(0, 0, 0, 0.01), 0 4px 4px rgba(0, 0, 0, 0.02), 0 10px 8px rgba(0, 0, 0, 0.03), 0 15px 15px rgba(0, 0, 0, 0.03), 0 30px 30px rgba(0, 0, 0, 0.04), 0 70px 65px rgba(0, 0, 0, 0.05);
-  border: solid;
-  border-radius: 0.2em;
-  border-color: var(--border-color);
-  border-width: 0.01em;
+  @include defBorder();
+
   overflow: hidden;
 }
 
@@ -320,6 +350,7 @@ body,
   flex-direction: column;
   /* width: 100%; */
   padding: 0.4em 1.5em 2em 1.7em;
+
   /* position: relative;
   left: -4em; */
 }
@@ -339,7 +370,6 @@ body,
 .projectCard p {
   margin: 0;
 }
-
 .categories {
   color: var(--faded-text);
   margin-top: 2em;
@@ -391,6 +421,7 @@ footer .socials {
 .socials img {
   height: 35px;
 }
+// STYLE GUIDE
 
 .flexHero .styleguideHeader {
   height: 1em;
@@ -402,7 +433,6 @@ footer .socials {
   color: var(--faded-text);
   margin-top: 0;
 }
-
 /**************************** ABOUT *******************************/
 .aboutHeroContainer .navBorder {
   border-color: var(--dark-border-color);
@@ -431,15 +461,11 @@ footer .socials {
 
 .about .flexHeroRight img {
   width: 100%;
-  /* https://freefrontend.com/css-image-effects/ */
-  box-shadow: 0 0 0 1px rgba(53, 72, 91, 0.07), 0 2px 2px rgba(0, 0, 0, 0.01), 0 4px 4px rgba(0, 0, 0, 0.02), 0 10px 8px rgba(0, 0, 0, 0.03), 0 15px 15px rgba(0, 0, 0, 0.03), 0 30px 30px rgba(0, 0, 0, 0.04), 0 70px 65px rgba(0, 0, 0, 0.05);
-  border: solid;
-  border-radius: 0.2em;
-  border-color: var(--border-color);
-  border-width: 0.01em;
+  @include defBorder();
 }
 
 /**************************** PROJECTS *****************************/
+
 .writeUp {
   margin-top: 3em;
   margin-bottom: 2em;
@@ -504,7 +530,7 @@ footer .socials {
   width: 25%;
   margin-left: auto;
   font-family: serif;
-  color: #00834c;
+  color: rgb(0, 131, 76);
 }
 
 .projGrid {
@@ -515,11 +541,11 @@ footer .socials {
 
 /**************************** BURB *****************************/
 .burbHeroContainer {
-  background-image: url("../img/burb/burb-hero.png");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  padding-bottom: 2em;
+  background: {
+    image: url("../img/burb/burb-hero.png");
+  }
+  @include heroBGImg;
+
   color: white;
 }
 
@@ -531,24 +557,21 @@ footer .socials {
 .burbHeroImg {
   width: 100%;
   /* aspect-ratio: 4/5; */
-  /* https://freefrontend.com/css-image-effects/ */
-  box-shadow: 0 0 0 1px rgba(53, 72, 91, 0.07), 0 2px 2px rgba(0, 0, 0, 0.01), 0 4px 4px rgba(0, 0, 0, 0.02), 0 10px 8px rgba(0, 0, 0, 0.03), 0 15px 15px rgba(0, 0, 0, 0.03), 0 30px 30px rgba(0, 0, 0, 0.04), 0 70px 65px rgba(0, 0, 0, 0.05);
-  border: solid;
-  border-radius: 0.2em;
-  border-color: var(--border-color);
-  border-width: 0.01em;
+  @include defBorder();
 }
 
+// DOUBLE CLUB
+
 .doubleHeroContainer {
-  background-image: url("../img/doubleclub/hero.png");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  padding-bottom: 2em;
+  background: {
+    image: url("../img/doubleclub/hero.png");
+  }
+  @include heroBGImg();
   color: white;
 }
 
 /************************** ANIMATIONS ************************/
+
 .navbar ul li:hover {
   text-decoration: underline;
 }
@@ -572,6 +595,7 @@ footer ul li a:hover {
   -moz-transform: translateX(100%);
   -webkit-transform: translateX(100%);
   transform: translateX(100%);
+
   -moz-animation: my-animation 6s linear infinite;
   -webkit-animation: my-animation 6s linear infinite;
   animation: my-animation 6s linear infinite;
@@ -618,10 +642,12 @@ footer ul li a:hover {
   .scrollBanner {
     font-size: 1em;
   }
+
   .flexHeroLeft h1 {
     font-size: 2em;
     width: 15em;
   }
+
   .bgSelect img {
     width: 8em;
   }
@@ -641,21 +667,26 @@ footer ul li a:hover {
   .scrollBanner {
     font-size: 0.85em;
   }
+
   .flexHeroLeft h1 {
     font-size: 1.7em;
     width: 15em;
   }
+
   .flexHeroLeft p {
     font-size: 0.9em;
   }
+
   .bgSelect img {
     width: 7em;
     /* aspect-ratio: 1/1; */
   }
+
   .projectCard {
     height: 12rem;
     font-size: 14px;
   }
+
   .burbLogotype {
     width: 230px;
   }
@@ -666,6 +697,7 @@ footer ul li a:hover {
   .projectGalleryGrid {
     grid-template-columns: repeat(1, 1fr);
   }
+
   .projectCard img {
     flex-basis: auto;
   }
@@ -675,9 +707,11 @@ footer ul li a:hover {
   .chrisImg {
     display: none;
   }
+
   .heroContainer {
     padding-bottom: 4em;
   }
+
   .flexHeroLeft,
   .flexHeroRight {
     width: 100%;
@@ -689,21 +723,26 @@ footer ul li a:hover {
     padding-top: 2em;
     font-size: 0.9em;
   }
+
   .flexHeroLeft h1 {
     font-size: 1.7em;
     width: 100%;
   }
+
   .flexHeroLeft p {
     font-size: 0.9em;
   }
+
   .bgSelect img {
     width: 7em;
     /* aspect-ratio: 1/1; */
   }
+
   .scrollBanner {
     -moz-transform: translateX(100%);
     -webkit-transform: translateX(100%);
     transform: translateX(100%);
+
     -moz-animation: my-animation 9s linear infinite;
     -webkit-animation: my-animation 9s linear infinite;
     animation: my-animation 9s linear infinite;
@@ -720,9 +759,11 @@ footer ul li a:hover {
     padding-right: 3em;
   }
   /* https://www.w3schools.com/howto/howto_js_topnav_responsive.asp */
+
   .navBorder {
     display: none;
   }
+
   .navbar ul li a {
     display: none;
   }
@@ -731,12 +772,15 @@ footer ul li a:hover {
     font-size: 1.6em;
     order: 1;
   }
+
   .navbar {
     padding-bottom: 0;
   }
+
   .navbar.responsive ul li {
     position: relative;
   }
+
   .mobileNavBorder {
     z-index: 0;
     position: absolute;
@@ -748,25 +792,31 @@ footer ul li a:hover {
     height: 2.5em;
     background-color: rgba(255, 255, 255, 0.2);
   }
+
   .indexHeroContainer {
     padding-bottom: 2em;
   }
+
   .aboutHeroContainer .mobileNavBorder {
     border-color: var(--dark-border-color);
   }
+
   .navbar.responsive .mobileNavBorder {
     width: 5.8em;
     height: 9.3em;
   }
+
   .navbar.responsive ul {
     display: flex;
     flex-direction: column;
     gap: 0.8em;
   }
+
   .navbar.responsive ul a.hamburger {
     /* position: relative; */
     order: 1;
   }
+
   .navbar.responsive ul li:first-child {
     /* position: relative; */
     order: 2;
@@ -779,15 +829,18 @@ footer ul li a:hover {
     /* position: relative; */
     order: 4;
   }
+
   .navbar.responsive a {
     float: none;
     display: block;
     /* flex-direction: column; */
     text-align: right;
   }
+
   .burbLogotype {
     width: 200px;
   }
+
   /* .mobileScrollTip {
     display: block;
   } */
