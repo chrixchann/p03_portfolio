@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Chris Chan: Style Guide</title>
     <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/fcf.default.css">
     <link
       href="https://fonts.googleapis.com/css?family=Inter"
       rel="stylesheet"
@@ -93,8 +94,11 @@
       <div class="projectCard notActive">
         <div class="leftDiv">
           <form action="" class="sgGridForm">
-            <div class="formLabel"><label for="fullName">Full Name:</label></div>
-            <div class="formInput"><input type="text" id="fullName" placeholder="Full Name..." /></div>
+            <div class="formGroup">
+              <div class="formLabel"><label for="fullName">Full Name:</label></div>
+              <div class="formInput"><input type="text" id="fullName" placeholder="Full Name..." /></div>
+            </div>
+
             
           </form>
         </div>
@@ -110,7 +114,7 @@
         <div class="leftDiv">
       <div class="bgSelect">
             <div class="images">
-              <a id="bg1"><img  src="img/bg1.png" alt="ocean"  /></a>
+              <a id="bg1"><img  src="img/bg1.jpg" alt="ocean"  /></a>
             </div>
           </div>
         </div>
@@ -122,6 +126,155 @@
         </div>
       </div>
     </div>
+    <div class="flexContainerCol">
+      <div><h1>Typography.</h1></div>
+      <!-- <div class="typeStyle">
+              <div class="headings">
+        <div class="headingsID">
+          <p>Display 1</p>
+        </div>
+
+        <h1 class="header">Spotify is my music player</h1>
+        <div class="headingsDescr">
+          <p>35px, 700</p>
+        </div>
+      </div>
+      </div> -->
+      <div class="typeStyle">
+              <div class="headings">
+        <div class="headingsID">
+          <p>Heading 1</p>
+        </div>
+
+        <h1 class="header">Spotify is my music player</h1>
+        <div class="headingsDescr">
+          <p>40px, 700</p>
+        </div>
+      </div>
+      </div>
+            <div class="typeStyle">
+              <div class="headings">
+        <div class="headingsID">
+          <p>Heading 2</p>
+        </div>
+
+        <h2 class="header">Spotify is my music player</h2>
+        <div class="headingsDescr">
+          <p>32px, 700</p>
+        </div>
+      </div>
+      </div>
+            <div class="typeStyle">
+              <div class="headings">
+        <div class="headingsID">
+          <p>Heading 3</p>
+        </div>
+
+        <h3 class="header">Spotify is my music player</h3>
+        <div class="headingsDescr">
+          <p>24px, 700</p>
+        </div>
+      </div>
+      </div>
+            <div class="typeStyle">
+              <div class="headings">
+        <div class="headingsID">
+          <p>Heading 4</p>
+        </div>
+
+        <h4 class="header">Spotify is my music player</h4>
+        <div class="headingsDescr">
+          <p>35px, 700</p>
+        </div>
+      </div>
+      </div>
+      <div class="typeStyle">
+              <div class="headings">
+        <div class="headingsID">
+          <p>Paragraph</p>
+        </div>
+
+        <p class="header">Spotify is my music player</p>
+        <div class="headingsDescr">
+          <p>16px, 500</p>
+        </div>
+      </div>
+      </div>
+    </div>
+
+    <div class="projectGalleryGrid">
+      <h1>Example Grid.</h1>
+      <div class="projectCard active">
+        <img src="img/burb/burb.jpg" alt="">
+        <div class="projDetails">
+          <!-- <p class="categories">EVALUATION</p> -->
+          <h3>Active Card</h3>
+          <h4>Time</h4>
+          <p>Brief Description</p>
+                      <p class="seeMore">See More ></p>
+
+        </div>
+      </div>
+      <div class="projectCard notActive">
+        <img src="img/burb/burb.jpg" alt="">
+        <div class="projDetails">
+          <!-- <p class="categories">EVALUATION</p> -->
+          <h3>Not Active Card</h3>
+          <h4>Time</h4>
+          <p>Brief Description</p>
+        </div>
+      </div>
+      <div class="projectCard notActive">
+        <img src="img/burb/burb.jpg" alt="">
+        <div class="projDetails">
+          <!-- <p class="categories">EVALUATION</p> -->
+          <h3>Not Active Card</h3>
+          <h4>Time</h4>
+          <p>Brief Description</p>
+        </div>
+      </div>
+    </div>
+    <div class="flexContainerCol">
+      <h1>Contact Form.</h1>
+          <form action="" class="sgGridForm">
+            <div class="formGroup">
+              <div class="formLabel"><label for="fullName">Full Name:</label></div>
+              <div class="formInput"><input type="text" id="fullName" placeholder="Full Name..." /></div>
+            </div>
+            <div class="formGroup">
+              <div class="formLabel"><label for="fullName">Full Name:</label></div>
+              <div class="formInput"><input type="text" id="fullName" placeholder="Full Name..." /></div>
+            </div>
+            <div class="formGroup">
+              <div class="formLabel"><label for="fullName">Full Name:</label></div>
+              <div class="formInput"><input type="text" id="fullName" placeholder="Full Name..." /></div>
+            </div>
+            <div class="formGroup">
+              <div class="formLabel"><label for="fullName">Full Name:</label></div>
+               <div class="control">
+                        <textarea name="Message" id="Message" class="textarea" maxlength="3000" rows="5" 
+                        data-validate-field="Message">asdfasd</textarea>
+                    </div>
+            </div>
+
+            
+          </form>
+    </div>
+
+    <div class="citations">
+      <h1>Citations.</h1>
+      <a href="https://freefrontend.com/css-image-effects/" target="_blank">https://freefrontend.com/css-image-effects/</a>
+      <a href="https://www.w3schools.com/howto/howto_css_responsive_form.asp" target="_blank">https://www.w3schools.com/howto/howto_css_responsive_form.asp</a>
+      <a href="http://browserhacks.com/" target="_blank">http://browserhacks.com/</a>
+      <a href="https://cssgradient.io/" target="_blank">https://cssgradient.io/</a>
+      <a href="https://animate.style/" target="_blank">https://animate.style/</a>
+      <a href="https://www.w3schools.com/js/js_htmldom_css.asp" target="_blank">https://www.w3schools.com/js/js_htmldom_css.asp</a>
+      <a href="https://alvarotrigo.com/blog/change-css-javascript/" target="_blank">https://alvarotrigo.com/blog/change-css-javascript/</a>
+      <a href="https://www.majesticform.com/form-guides/contact-form-installation-free" target="
+      ">https://www.majesticform.com/form-guides/contact-form-installation-free</a>
+    </div>
+  
+    
 
     <footer>
       <a href="index.html" class="pageTitle">chris chan</a>

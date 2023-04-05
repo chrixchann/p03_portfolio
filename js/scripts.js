@@ -11,7 +11,7 @@ oceanButton.addEventListener("click", () => {
   //     return;
   //   } else {
   //     currentBackground = 1;
-  backgroundContainer.style.backgroundImage = "url(img/bg1.png)";
+  backgroundContainer.style.backgroundImage = "url(img/bg1.jpg)";
   console.log(backgroundContainer);
   //   }
 });

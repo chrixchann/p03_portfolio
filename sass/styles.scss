@@ -46,7 +46,19 @@
 }
 
 /* TYPOGRAPHY */
+h1 {
+  font-size: 40px;
+  transition-duration: 250ms;
+  // font-size: 36px;
+}
 
+h2 {
+  font-size: 32px;
+}
+
+h3 {
+  font-size: 24px;
+}
 /* STYLES */
 
 * {
@@ -66,14 +78,18 @@ body,
 .navbar,
 .flexHero,
 .projectGalleryGrid,
-.writeUp {
+.writeUp,
+.flexContainerCol,
+.citations {
   margin: auto;
 }
 
 .navbar,
 .flexHero,
 .projectGalleryGrid,
-.writeUp {
+.writeUp,
+.flexContainerCol,
+.citations {
   max-width: 1280px;
   padding-left: 5em;
   padding-right: 5em;
@@ -85,7 +101,7 @@ body,
 
 .indexHeroContainer {
   background: {
-    image: url("../img/bg1.png");
+    image: url("../img/bg1.jpg");
   }
   @include heroBGImg;
   color: white;
@@ -180,7 +196,7 @@ body,
 
 .flexHeroLeft h1 {
   margin-top: 0;
-  font-size: 2.5em;
+
   width: 17em;
   font-weight: 500;
 }
@@ -354,7 +370,7 @@ body,
 
 .projectCard .seeMore {
   margin-top: auto;
-  color: blue;
+  color: var(--lightish-blue);
   text-decoration: none;
 }
 
@@ -409,7 +425,7 @@ footer .socials {
   border-top: 2px dashed var(--off-black);
   color: var(--off-black);
   margin-top: 0;
-  margin-bottom: 0.3em;
+  margin-bottom: 0.5em;
   line-height: 160px;
 }
 
@@ -420,9 +436,11 @@ footer .socials {
   gap: 20px;
   width: 100%;
   justify-content: center;
-  background-color: var(--lightish-blue);
+  // background-color: var(--lightish-blue);
   padding: 2em;
-  @include defBorder();
+  // @include defBorder();
+  border: 1px solid var(--faded-text);
+  border-radius: 8px;
 }
 
 .styleGuide {
@@ -441,12 +459,12 @@ footer .socials {
 /* CSS */
 .button-6 {
   align-items: center;
-  background-color: #ffffff;
+  background-color: var(--lightish-blue);
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 0.25rem;
   box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
   box-sizing: border-box;
-  color: rgba(0, 0, 0, 0.85);
+  color: rgba(255, 255, 255, 0.85);
   cursor: pointer;
   display: inline-flex;
   // font-family: system-ui, -apple-system, system-ui, "Helvetica Neue", Helvetica,
@@ -483,15 +501,15 @@ footer .socials {
 .button-6:focus {
   border-color: rgba(0, 0, 0, 0.15);
   box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
-  color: rgba(0, 0, 0, 0.65);
+  // color: rgba(0, 0, 0, 0.65);
 }
 
 .button-6:hover {
-  transform: translateY(-1px);
+  transform: translateY(-0.2em);
 }
 
 .button-6:active {
-  background-color: #f0f0f1;
+  background-color: var(--lightish-blue);
   border-color: rgba(0, 0, 0, 0.15);
   box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
   color: rgba(0, 0, 0, 0.65);
@@ -522,6 +540,39 @@ textarea {
   border-radius: 4px;
   box-sizing: border-box;
   resize: vertical;
+}
+
+.flexContainerCol {
+  display: flex;
+  flex-direction: column;
+}
+
+.typeStyle {
+  border-bottom: dashed var(--faded-text) 2px;
+}
+.typeStyle .header {
+  margin-top: 0.2em;
+  margin-bottom: 0em;
+}
+.typeStyle p {
+  margin-top: 0.6em;
+}
+
+.control {
+  box-sizing: border-box;
+  clear: both;
+  font-size: 1rem;
+  position: relative;
+  text-align: inherit;
+}
+
+.citations {
+  display: flex;
+  flex-direction: column;
+}
+
+.citations a {
+  width: fit-content;
 }
 /**************************** ABOUT *******************************/
 .aboutHeroContainer .navBorder {
@@ -750,7 +801,7 @@ footer ul li a:hover {
     font-size: 1em;
   }
 
-  .flexHeroLeft h1 {
+  h1 {
     font-size: 2em;
     width: 15em;
   }
@@ -775,7 +826,7 @@ footer ul li a:hover {
     font-size: 0.85em;
   }
 
-  .flexHeroLeft h1 {
+  h1 {
     font-size: 1.7em;
     width: 15em;
   }
@@ -797,6 +848,10 @@ footer ul li a:hover {
   .burbLogotype {
     width: 230px;
   }
+  .flexHero .styleguideHeader {
+    font-size: 7.9em;
+    line-height: 135px;
+  }
 }
 
 /* Medium devices (landscape tablets, 768px and down) */
@@ -807,6 +862,10 @@ footer ul li a:hover {
 
   .projectCard img {
     flex-basis: auto;
+  }
+  .flexHero .styleguideHeader {
+    font-size: 7.7em;
+    line-height: 135px;
   }
 }
 
@@ -831,7 +890,7 @@ footer ul li a:hover {
     font-size: 0.9em;
   }
 
-  .flexHeroLeft h1 {
+  h1 {
     font-size: 1.7em;
     width: 100%;
   }
@@ -853,6 +912,10 @@ footer ul li a:hover {
     -moz-animation: my-animation 9s linear infinite;
     -webkit-animation: my-animation 9s linear infinite;
     animation: my-animation 9s linear infinite;
+  }
+  .flexHero .styleguideHeader {
+    font-size: 5.5em;
+    line-height: 135px;
   }
 }
 
@@ -956,6 +1019,10 @@ footer ul li a:hover {
   }
   .writeUp .projInfo h3 {
     margin-bottom: 0;
+  }
+  .flexHero .styleguideHeader {
+    font-size: 5.5em;
+    line-height: 110px;
   }
 }
 
