@@ -7,10 +7,10 @@
     <title>Chris Chan: Style Guide</title>
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="css/fcf.default.css">
-    <link
-      href="https://fonts.googleapis.com/css?family=Inter"
-      rel="stylesheet"
-    />
+     <style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+</style>
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -24,13 +24,7 @@
         <div class="navBorder"></div>
         <ul>
           <li><a href="index.html">my work</a></li>
-          <li>
-            <a
-              target="_blank"
-              href="https://drive.google.com/file/d/1Fr1YGUmIiIEflUGDZbJ-UYbgU2SfGnTR/view"
-              >resume</a
-            >
-          </li>
+            <li><a href="contact.html">contact</a></li>
           <li><a href="about.html">about</a></li>
           <a href="javascript:void(0);" class="hamburger" onclick="hamburger()">
             <i class="fa fa-bars"></i
@@ -42,17 +36,17 @@
       <h1 class="styleguideHeader">Style Guide</h1>
       <!-- <h3>Quick Links</h3> -->
       <div class="flexContainerRow">
-        <button class="button-6" role="button">Interactive Elements</button>
-        <button class="button-6" role="button">Typography</button>
-        <button class="button-6" role="button">Combined Elements</button>
-        <button class="button-6" role="button">Project Grid</button>
-        <button class="button-6" role="button">Contact Form</button>
-        <button class="button-6" role="button">Citations</button>
+        <a href="#interactiveEl"><button class="button-6" role="button">Interactive Elements</button></a>
+        <a href="#type"><button class="button-6" role="button">Typography</button></a>
+        <a href="#combinedEl"><button class="button-6" role="button">Combined Elements</button></a>
+        <a href="#projGrid"><button class="button-6" role="button">Project Grid</button></a>
+        <a href="#contact"><button class="button-6" role="button">Contact Form</button></a>
+        <a href="#cites"><button class="button-6" role="button">Citations</button></a>
       </div>
     </div>
 
     <div class="projectGalleryGrid">
-      <h1>Interactive Elements.</h1>
+      <h1 class="sectionHeader" id="interactiveEl">Interactive Elements.</h1>
       <div class="projectCard notActive">
         <div class="leftDiv">
           <ul>
@@ -95,7 +89,7 @@
         <div class="leftDiv">
           <form action="" class="sgGridForm">
             <div class="formGroup">
-              <div class="formLabel"><label for="fullName">Full Name:</label></div>
+              <!-- <div class="formLabel"><label for="fullName">Full Name:</label></div> -->
               <div class="formInput"><input type="text" id="fullName" placeholder="Full Name..." /></div>
             </div>
 
@@ -126,8 +120,9 @@
         </div>
       </div>
     </div>
+
     <div class="flexContainerCol">
-      <div><h1>Typography.</h1></div>
+      <div><h1 class="sectionHeader" id="type">Typography.</h1></div>
       <!-- <div class="typeStyle">
               <div class="headings">
         <div class="headingsID">
@@ -146,7 +141,7 @@
           <p>Heading 1</p>
         </div>
 
-        <h1 class="header">Spotify is my music player</h1>
+        <h1 class="header">Inter is my favourite font for the web.</h1>
         <div class="headingsDescr">
           <p>40px, 700</p>
         </div>
@@ -158,7 +153,7 @@
           <p>Heading 2</p>
         </div>
 
-        <h2 class="header">Spotify is my music player</h2>
+        <h2 class="header">Inter is my favourite font for the web.</h2>
         <div class="headingsDescr">
           <p>32px, 700</p>
         </div>
@@ -170,7 +165,7 @@
           <p>Heading 3</p>
         </div>
 
-        <h3 class="header">Spotify is my music player</h3>
+        <h3 class="header">Inter is my favourite font for the web.</h3>
         <div class="headingsDescr">
           <p>24px, 700</p>
         </div>
@@ -182,7 +177,7 @@
           <p>Heading 4</p>
         </div>
 
-        <h4 class="header">Spotify is my music player</h4>
+        <h4 class="header">Inter is my favourite font for the web.</h4>
         <div class="headingsDescr">
           <p>35px, 700</p>
         </div>
@@ -194,7 +189,7 @@
           <p>Paragraph</p>
         </div>
 
-        <p class="header">Spotify is my music player</p>
+        <p class="header">Inter is my favourite font for the web.</p>
         <div class="headingsDescr">
           <p>16px, 500</p>
         </div>
@@ -203,7 +198,7 @@
     </div>
 
     <div class="projectGalleryGrid">
-      <h1>Example Grid.</h1>
+      <h1 class="sectionHeader" id="projGrid">Project Grid.</h1>
       <div class="projectCard active">
         <img src="img/burb/burb.jpg" alt="">
         <div class="projDetails">
@@ -235,26 +230,32 @@
       </div>
     </div>
     <div class="flexContainerCol">
-      <h1>Contact Form.</h1>
-          <form action="" class="sgGridForm">
+      <h1 class="sectionHeader" id="contact">Contact Form.</h1>
+      
+          <form action="https://formsubmit.co/chaanchriis@gmail.com" method="POST" class="sgGridForm" autocomplete="off">
+            <h3>Send me a message and we can chat!</h3>
             <div class="formGroup">
-              <div class="formLabel"><label for="fullName">Full Name:</label></div>
-              <div class="formInput"><input type="text" id="fullName" placeholder="Full Name..." /></div>
+              
             </div>
             <div class="formGroup">
-              <div class="formLabel"><label for="fullName">Full Name:</label></div>
-              <div class="formInput"><input type="text" id="fullName" placeholder="Full Name..." /></div>
+              <!-- <div class="formLabel"><label for="fullName">Full Name:</label></div> -->
+              <div class="formInput"><input type="text" id="fullName" name="name" placeholder="Full Name..." /></div>
             </div>
             <div class="formGroup">
-              <div class="formLabel"><label for="fullName">Full Name:</label></div>
-              <div class="formInput"><input type="text" id="fullName" placeholder="Full Name..." /></div>
+              <!-- <div class="formLabel"><label for="email">Email Address:</label></div> -->
+              <div class="formInput"><input type="text" id="email" name="email" placeholder="Your Email..." /></div>
+            </div>
+
+            <div class="formGroup">
+              <!-- <div class="formLabel"><label for="message">Message:</label></div> -->
+              <div class="control">
+                <textarea name="message" id="message" class="textarea" maxlength="3000" rows="5" placeholder="Write your message here..."></textarea>
+              </div>
             </div>
             <div class="formGroup">
-              <div class="formLabel"><label for="fullName">Full Name:</label></div>
-               <div class="control">
-                        <textarea name="Message" id="Message" class="textarea" maxlength="3000" rows="5" 
-                        data-validate-field="Message">asdfasd</textarea>
-                    </div>
+              <button class="button-6 submit">
+                Submit
+              </button>
             </div>
 
             
@@ -262,7 +263,7 @@
     </div>
 
     <div class="citations">
-      <h1>Citations.</h1>
+      <h1 class="sectionHeader" id="cites">Citations.</h1>
       <a href="https://freefrontend.com/css-image-effects/" target="_blank">https://freefrontend.com/css-image-effects/</a>
       <a href="https://www.w3schools.com/howto/howto_css_responsive_form.asp" target="_blank">https://www.w3schools.com/howto/howto_css_responsive_form.asp</a>
       <a href="http://browserhacks.com/" target="_blank">http://browserhacks.com/</a>
@@ -270,8 +271,11 @@
       <a href="https://animate.style/" target="_blank">https://animate.style/</a>
       <a href="https://www.w3schools.com/js/js_htmldom_css.asp" target="_blank">https://www.w3schools.com/js/js_htmldom_css.asp</a>
       <a href="https://alvarotrigo.com/blog/change-css-javascript/" target="_blank">https://alvarotrigo.com/blog/change-css-javascript/</a>
-      <a href="https://www.majesticform.com/form-guides/contact-form-installation-free" target="
-      ">https://www.majesticform.com/form-guides/contact-form-installation-free</a>
+      <a href="https://formsubmit.co/">https://formsubmit.co/</a>
+      <a href="https://www.youtube.com/watch?v=r4RQ38EoLds&t=2s">https://www.youtube.com/watch?v=r4RQ38EoLds&t=2s</a>
+      <a href="https://fonts.google.com/specimen/Inter">https://fonts.google.com/specimen/Inter</a>
+      <a href="https://fontawesome.com/">https://fontawesome.com/</a>
+      <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Text/Wrapping_Text">https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Text/Wrapping_Text</a>
     </div>
   
     
@@ -281,13 +285,7 @@
       <div class="navLinks">
         <ul>
           <li><a href="index.html" class="active">my work</a></li>
-          <li>
-            <a
-              target="_blank"
-              href="https://drive.google.com/file/d/1Fr1YGUmIiIEflUGDZbJ-UYbgU2SfGnTR/view"
-              >resume</a
-            >
-          </li>
+            <li><a href="contact.html">contact</a></li>
           <li><a href="about.html">about</a></li>
         </ul>
       </div>
@@ -308,6 +306,8 @@
         <a target="_blank" href="https://www.linkedin.com/in/chaanchriis/"
           ><img src="img/icons/linkedin.svg" alt="linkedin"
         /></a>
+                  <a href="styleguide.html"><img src="img/icons/brush-solid.svg" alt="style guide"
+              /></a>
       </div>
     </footer>
     <script src="js/scripts.js"></script>

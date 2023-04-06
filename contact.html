@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Chris Chan: Hoochy' Booch</title>
+    <title>Chris Chan: Contact Me</title>
     <link rel="stylesheet" href="css/styles.css" />
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
@@ -22,19 +22,48 @@
         <div class="mobileNavBorder"></div>
         <div class="navBorder"></div>
         <ul>
-          <li><a href="index.html" class="active">my work</a></li>
-          <li>
-            <a
-              target="_blank"
-              href="https://drive.google.com/file/d/1Fr1YGUmIiIEflUGDZbJ-UYbgU2SfGnTR/view"
-              >resume</a
-            >
-          </li>
+          <li><a href="index.html">my work</a></li>
+          <li><a href="contact.html" class="active">contact</a></li>
           <li><a href="about.html">about</a></li>
           <a href="javascript:void(0);" class="hamburger" onclick="hamburger()">
             <i class="fa fa-bars"></i>
           </a>
         </ul>
+      </div>
+      <div class="flexHero">
+        <h1 class="styleguideHeader">Contact Me.</h1>
+        <div class="flexContainerCol">
+      
+          <form action="https://formsubmit.co/chaanchriis@gmail.com" method="POST" class="sgGridForm" autocomplete="off">
+            <input type="hidden" name="_next" value="http://127.0.0.1:5500/thankyou.html">
+
+            <h3>Send me a message and we can chat!</h3>
+            <div class="formGroup">
+              
+            </div>
+            <div class="formGroup">
+              <!-- <div class="formLabel"><label for="fullName">Full Name:</label></div> -->
+              <div class="formInput"><input type="text" id="fullName" name="name" placeholder="Full Name..." /></div>
+            </div>
+            <div class="formGroup">
+              <!-- <div class="formLabel"><label for="email">Email Address:</label></div> -->
+              <div class="formInput"><input type="text" id="email" name="email" placeholder="Your Email..." /></div>
+            </div>
+
+            <div class="formGroup">
+              <!-- <div class="formLabel"><label for="message">Message:</label></div> -->
+              <div class="control">
+                <textarea name="message" id="message" class="textarea" maxlength="3000" rows="5" placeholder="Write your message here..."></textarea>
+              </div>
+            </div>
+            <div class="formGroup">
+              <button class="button-6 submit">
+                Submit
+              </button>
+            </div>
+
+            
+          </form>
       </div>
     </div>
     <footer>
@@ -42,7 +71,7 @@
       <div class="navLinks">
         <ul>
           <li><a href="index.html" class="active">my work</a></li>
-          <li><a href="contact.html">contact</a></li>
+            <li><a href="contact.html" class="active">contact</a></li>
           <li><a href="about.html">about</a></li>
         </ul>
       </div>
@@ -63,9 +92,8 @@
         <a target="_blank" href="https://www.linkedin.com/in/chaanchriis/"
           ><img src="img/icons/linkedin.svg" alt="linkedin"
         /></a>
-        <a href="styleguide.html"
-          ><img src="img/icons/brush-solid.svg" alt="style guide"
-        /></a>
+         <a href="styleguide.html"><img src="img/icons/brush-solid.svg" alt="style guide"
+              /></a>
       </div>
     </footer>
     <script src="js/scripts.js"></script>
