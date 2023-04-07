@@ -42,26 +42,12 @@
       <h1 class="styleguideHeader">Style Guide</h1>
       <!-- <h3>Quick Links</h3> -->
       <div class="flexContainerRow">
-        <a href="#interactiveEl"
-          ><button class="button-6" role="button">
-            Interactive Elements
-          </button></a
-        >
-        <a href="#type"
-          ><button class="button-6" role="button">Typography</button></a
-        >
-        <a href="#combinedEl"
-          ><button class="button-6" role="button">Combined Elements</button></a
-        >
-        <a href="#projGrid"
-          ><button class="button-6" role="button">Project Grid</button></a
-        >
-        <a href="#contact"
-          ><button class="button-6" role="button">Contact Form</button></a
-        >
-        <a href="#cites"
-          ><button class="button-6" role="button">Citations</button></a
-        >
+        <a href="#interactiveEl" class="button-6">Interactive Elements</a>
+        <a href="#type" class="button-6">Typography</a>
+        <a href="#hero" class="button-6">Hero Section</a>
+        <a href="#projGrid" class="button-6">Grid</a>
+        <a href="#contact" class="button-6">Contact Form</a>
+        <a href="#cites" class="button-6">Citations</a>
       </div>
     </div>
 
@@ -136,11 +122,11 @@ class="button-6.submit"&gt;
       </div>
       <div class="projectCard notActive intEl">
         <div class="leftDiv">
-          <form action="" class="sgGridForm">
+          <form class="sgGridForm">
             <div class="formGroup">
               <!-- <div class="formLabel"><label for="fullName">Full Name:</label></div> -->
               <div class="formInput">
-                <input type="text" id="fullName" placeholder="Full Name..." />
+                <input type="text" id="fullNameSg" placeholder="Full Name..." />
               </div>
             </div>
           </form>
@@ -254,6 +240,38 @@ class="button-6.submit"&gt;
         </div>
       </div>
     </div>
+    <div class="flexHero">
+      <h1 class="sectionHeader" id="hero">Hero Section.</h1>
+    </div>
+    <div class="burbHeroContainer">
+      <div class="flexHero">
+        <div class="flexElement">
+          <div class="nextProject">
+            <a href="#" onclick="return false;"
+              ><p>Move to next project ></p></a
+            >
+          </div>
+          <img
+            class="burbHeroImg"
+            src="img/burb/flow_gif.gif"
+            alt="burb_flow"
+          />
+          <p class="heroCaption">Hero Image Caption</p>
+          <!-- <div class="projInfo"></div> -->
+          <div class="bio">
+            <h1>LOGO</h1>
+            <h1>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </h1>
+          </div>
+        </div>
+        <div class="mobileScrollTip">
+          <!-- <p>SCROLL</p> -->
+          <img src="img/icons/chevron-down.svg" alt="down_arrow" />
+        </div>
+      </div>
+    </div>
 
     <div class="projectGalleryGrid">
       <h1 class="sectionHeader" id="projGrid">Project Grid.</h1>
@@ -300,7 +318,7 @@ class="button-6.submit"&gt;
               type="text"
               id="fullName"
               name="name"
-              placeholder="Full Name..."
+              placeholder="Your Name..."
             />
           </div>
         </div>
@@ -372,6 +390,14 @@ class="button-6.submit"&gt;
         href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Text/Wrapping_Text"
         >https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Text/Wrapping_Text</a
       >
+      <a
+        href="https://stackoverflow.com/questions/4502633/how-to-affect-other-elements-when-one-element-is-hovered"
+        >https://stackoverflow.com/questions/4502633/how-to-affect-other-elements-when-one-element-is-hovered</a
+      >
+      <a
+        href="https://css-tricks.com/snippets/css/prevent-long-urls-from-breaking-out-of-container/"
+        >https://css-tricks.com/snippets/css/prevent-long-urls-from-breaking-out-of-container/</a
+      >
     </div>
 
     <footer>
@@ -386,7 +412,7 @@ class="button-6.submit"&gt;
       <div class="socials">
         <a
           target="_blank"
-          href="mailto:chaanchriis@gmail.com?subject=Chat with Chris"
+          href="mailto:chaanchriis@gmail.com?subject=Chat&#160;with&#160;Chris"
           ><img src="img/icons/envelope-solid.svg" alt="email"
         /></a>
         <a target="_blank" href="https://www.linkedin.com/in/chaanchriis/"

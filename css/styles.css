@@ -508,11 +508,13 @@ footer .socials {
   box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
 }
 
-.button-6:hover {
+.button-6:hover,
+.nextProject:hover {
   transform: translateY(-0.2em);
 }
 
-.button-6:active {
+.button-6:active,
+.nextProject:active {
   background-color: var(--lightish-blue);
   border-color: rgba(0, 0, 0, 0.15);
   box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
@@ -674,6 +676,7 @@ textarea {
   padding-right: 1em;
   margin-bottom: 1em;
   background-color: rgba(255, 255, 255, 0.2);
+  transition: all 250ms;
 }
 
 .nextProject a {
