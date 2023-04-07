@@ -9,6 +9,9 @@
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
     </style>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
+    </style>
 
     <link
       rel="stylesheet"
@@ -25,18 +28,28 @@
           <li><a href="index.html" class="active">my work</a></li>
           <li><a href="contact.html">contact</a></li>
           <li><a href="about.html">about</a></li>
-          <a href="javascript:void(0);" class="hamburger" onclick="hamburger()">
-            <i class="fa fa-bars"></i>
-          </a>
+          <li>
+            <a
+              href="javascript:void(0);"
+              class="hamburger"
+              onclick="hamburger()"
+            >
+              <i class="fa fa-bars"></i>
+            </a>
+          </li>
         </ul>
       </div>
       <div class="flexHero">
         <div class="flexElement">
+          <div class="nextProject">
+            <a href="doubleclub.html"><p>Move to Double Club: Miami ></p></a>
+          </div>
           <img
             class="burbHeroImg"
             src="img/burb/flow_gif.gif"
             alt="burb_flow"
           />
+          <p class="heroCaption">Personalized Shopping Flow</p>
           <!-- <div class="projInfo"></div> -->
           <div class="bio">
             <img
@@ -69,12 +82,8 @@
         <div class="projInfo">
           <h3>Challenge</h3>
           <p>
-            idk smt like create a useful e-commerce presence for Burb Nulla
-            feugiat est a facilisis ultricies. Nam efficitur augue eu varius
-            volutpat. Maecenas pulvinar accumsan magna, non pellentesque dui
-            dapibus ac. Nam volutpat odio at odio imperdiet fringilla. Aenean
-            urna metus, tristique non dictum rhoncus, finibus quis mauris.
-            Curabitur accumsan vestibulum venenatis.
+            Create an e-commerce experience that reflects Burb's in-store
+            experience.
           </p>
         </div>
         <div class="projInfo">
@@ -117,7 +126,7 @@
         </p>
 
         <h3>Company Analysis</h3>
-        <img src="img/burb/burb company research.png" alt="" />
+        <img src="img/burb/burb company research.png" alt="company_research" />
       </div>
       <div class="projSection">
         <h1>Demograhic Research</h1>
@@ -220,15 +229,38 @@
           </div>
         </div>
       </div>
+      <div class="projSection">
+        <h1>Reflection</h1>
+        <p>
+          Looking back on this project, I'd say that the most valuable skill I
+          gained from completing this project was how to conduct proper
+          research. More specifically, knowing what to research in order to find
+          information that is useful pushes me towards finding a good solution
+          for the client. In this case, it was researching other successful
+          brands and finding out what made their customers so loyal to them.
+          <br /><br />
+          Working together with my group members also went extremely well and I
+          learned a lot about how to keep things organized in a self-directed
+          group. Things like making a weekly timeline where we would each put
+          down our availabilities made it easy to find times when we could all
+          get together and make decisions on the direction of our project, and
+          agreeing to leave egos out of our workspace made collaboration go
+          extremely smoothly and ensured we always got the best ideas.
+          <br /><br />
+          While I am very proud of the work we did on creating an online
+          shopping experience that made customers feel like they were making
+          informed decisions, I do think we could have made the site look more
+          visually comforting to more closely match Burb’s culture and mission.
+        </p>
+      </div>
     </div>
 
     <div class="projectGalleryGrid">
       <h1>See some of my other work.</h1>
       <a href="doubleclub.html" class="projectCardLink">
         <div class="projectCard active">
-          <img src="img/doubleclub/double.jpg" alt="" />
+          <img src="img/doubleclub/double.jpg" alt="doubleClubHero" />
           <div class="projDetails">
-            <!-- <p class="categories">EVALUATION</p> -->
             <h3>Double Club Miami</h3>
             <h4>Summer 2021</h4>
             <p>Nightclub Ticketing Process</p>
@@ -236,20 +268,20 @@
           </div>
         </div>
       </a>
+
       <div class="projectCard notActive">
-        <img src="img/hoochybooch/hoochybooch.jpg" alt="" />
+        <img src="img/hoochybooch/hoochybooch.jpg" alt="hoochyBoochHero" />
         <div class="projDetails">
-          <!-- <p class="categories">EVALUATION</p> -->
           <h3>Hoochy' Booch</h3>
           <h4>Fall 2022</h4>
           <p>E-commerce website evaluation</p>
           <p class="seeMore">Coming Soon!</p>
         </div>
       </div>
+
       <div class="projectCard notActive">
-        <img src="img/nissan/nissan_hero.jpg" alt="" />
+        <img src="img/nissan/nissan_hero.jpg" alt="cmHero" />
         <div class="projDetails">
-          <!-- <p class="categories">EVALUATION</p> -->
           <h3>Critical Mass Internship</h3>
           <h4>Summer 2022</h4>
           <p>Nissan USA UX</p>
@@ -285,7 +317,7 @@
           ><img src="img/icons/linkedin.svg" alt="linkedin"
         /></a>
         <a href="styleguide.html"
-          ><img src="img/icons/brush-solid.svg" alt="style guide"
+          ><img src="img/icons/brush-solid.svg" alt="styleGuide"
         /></a>
       </div>
     </footer>

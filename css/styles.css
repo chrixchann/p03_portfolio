@@ -41,7 +41,6 @@ p {
   font-family: "Inter", "sans-serif";
   letter-spacing: -0.05em;
   box-sizing: border-box;
-  overflow: visible;
   /* max-width: 1280px; */
 }
 
@@ -72,7 +71,7 @@ body,
 }
 
 .about {
-  color: black;
+  color: var(--off-black);
 }
 
 .indexHeroContainer {
@@ -106,7 +105,7 @@ body,
   top: 3.5em;
   right: 5.02em;
   border: solid 1px var(--border-color);
-  border-radius: 8px;
+  border-radius: 6px;
   width: 16.15em;
   height: 2.5em;
   background-color: rgba(255, 255, 255, 0.2);
@@ -152,6 +151,11 @@ body,
   white-space: nowrap;
 }
 
+.navbar ul li:nth-child(4) {
+  /* position: relative; */
+  display: none;
+}
+
 .navbar a.active {
   font-weight: 600;
 }
@@ -176,7 +180,7 @@ body,
 
 .flexHeroLeft h1 {
   margin-top: 0;
-  width: 17em;
+  width: 16em;
 }
 
 .flexHeroLeft p {
@@ -190,8 +194,10 @@ body,
   box-shadow: 0 0 0 1px rgba(53, 72, 91, 0.07), 0 2px 2px rgba(0, 0, 0, 0.01), 0 4px 4px rgba(0, 0, 0, 0.02), 0 10px 8px rgba(0, 0, 0, 0.03), 0 15px 15px rgba(0, 0, 0, 0.03), 0 30px 30px rgba(0, 0, 0, 0.04), 0 70px 65px rgba(0, 0, 0, 0.05);
   -webkit-box-shadow: 0 0 0 1px rgba(53, 72, 91, 0.07), 0 2px 2px rgba(0, 0, 0, 0.01), 0 4px 4px rgba(0, 0, 0, 0.02), 0 10px 8px rgba(0, 0, 0, 0.03), 0 15px 15px rgba(0, 0, 0, 0.03), 0 30px 30px rgba(0, 0, 0, 0.04), 0 70px 65px rgba(0, 0, 0, 0.05);
   -moz-box-shadow: 0 0 0 1px rgba(53, 72, 91, 0.07), 0 2px 2px rgba(0, 0, 0, 0.01), 0 4px 4px rgba(0, 0, 0, 0.02), 0 10px 8px rgba(0, 0, 0, 0.03), 0 15px 15px rgba(0, 0, 0, 0.03), 0 30px 30px rgba(0, 0, 0, 0.04), 0 70px 65px rgba(0, 0, 0, 0.05);
-  border: solid;
+  --webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
   border-radius: 6px;
+  border: solid;
   border-color: var(--border-color);
   border-width: 0.01em;
   -webkit-transition: 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
@@ -212,8 +218,10 @@ body,
   box-shadow: 0 0 0 1px rgba(53, 72, 91, 0.07), 0 2px 2px rgba(0, 0, 0, 0.01), 0 4px 4px rgba(0, 0, 0, 0.02), 0 10px 8px rgba(0, 0, 0, 0.03), 0 15px 15px rgba(0, 0, 0, 0.03), 0 30px 30px rgba(0, 0, 0, 0.04), 0 70px 65px rgba(0, 0, 0, 0.05);
   -webkit-box-shadow: 0 0 0 1px rgba(53, 72, 91, 0.07), 0 2px 2px rgba(0, 0, 0, 0.01), 0 4px 4px rgba(0, 0, 0, 0.02), 0 10px 8px rgba(0, 0, 0, 0.03), 0 15px 15px rgba(0, 0, 0, 0.03), 0 30px 30px rgba(0, 0, 0, 0.04), 0 70px 65px rgba(0, 0, 0, 0.05);
   -moz-box-shadow: 0 0 0 1px rgba(53, 72, 91, 0.07), 0 2px 2px rgba(0, 0, 0, 0.01), 0 4px 4px rgba(0, 0, 0, 0.02), 0 10px 8px rgba(0, 0, 0, 0.03), 0 15px 15px rgba(0, 0, 0, 0.03), 0 30px 30px rgba(0, 0, 0, 0.04), 0 70px 65px rgba(0, 0, 0, 0.05);
-  border: solid;
+  --webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
   border-radius: 6px;
+  border: solid;
   border-color: var(--border-color);
   border-width: 0.01em;
   -webkit-transition: 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
@@ -287,8 +295,10 @@ body,
   box-shadow: 0 0 0 1px rgba(53, 72, 91, 0.07), 0 2px 2px rgba(0, 0, 0, 0.01), 0 4px 4px rgba(0, 0, 0, 0.02), 0 10px 8px rgba(0, 0, 0, 0.03), 0 15px 15px rgba(0, 0, 0, 0.03), 0 30px 30px rgba(0, 0, 0, 0.04), 0 70px 65px rgba(0, 0, 0, 0.05);
   -webkit-box-shadow: 0 0 0 1px rgba(53, 72, 91, 0.07), 0 2px 2px rgba(0, 0, 0, 0.01), 0 4px 4px rgba(0, 0, 0, 0.02), 0 10px 8px rgba(0, 0, 0, 0.03), 0 15px 15px rgba(0, 0, 0, 0.03), 0 30px 30px rgba(0, 0, 0, 0.04), 0 70px 65px rgba(0, 0, 0, 0.05);
   -moz-box-shadow: 0 0 0 1px rgba(53, 72, 91, 0.07), 0 2px 2px rgba(0, 0, 0, 0.01), 0 4px 4px rgba(0, 0, 0, 0.02), 0 10px 8px rgba(0, 0, 0, 0.03), 0 15px 15px rgba(0, 0, 0, 0.03), 0 30px 30px rgba(0, 0, 0, 0.04), 0 70px 65px rgba(0, 0, 0, 0.05);
-  border: solid;
+  --webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
   border-radius: 6px;
+  border: solid;
   border-color: var(--border-color);
   border-width: 0.01em;
   overflow: hidden;
@@ -307,7 +317,7 @@ body,
 
 .projectCard .leftDiv {
   height: 100%;
-  flex-basis: 50%;
+  flex-basis: 45%;
   flex-shrink: 0;
   display: flex;
   justify-content: center;
@@ -317,7 +327,7 @@ body,
 }
 
 .projectCard .projDetails {
-  flex-basis: 50%;
+  flex-basis: 55%;
   display: flex;
   flex-direction: column;
   /* width: 100%; */
@@ -419,7 +429,7 @@ footer .socials {
 }
 
 .sectionHeader {
-  font-size: 50px;
+  font-size: 60px;
   width: fit-content;
 }
 
@@ -434,6 +444,22 @@ footer .socials {
 
 .styleGuide ul li a:hover {
   text-decoration: underline;
+}
+
+.groupCol {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 1.4em;
+}
+
+.groupCol h4,
+.groupCol p {
+  margin-bottom: 0;
+}
+
+.groupCol pre {
+  margin-top: 0;
 }
 
 /* CSS */
@@ -502,6 +528,10 @@ footer .socials {
   background-color: #e87c7e;
 }
 
+.projectCard.intEl {
+  height: auto;
+}
+
 .projectCard form {
   padding-right: 2em;
   padding-left: 2em;
@@ -561,6 +591,9 @@ textarea {
 
 .citations a {
   width: fit-content;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-word;
 }
 
 /**************************** ABOUT *******************************/
@@ -616,13 +649,43 @@ textarea {
   box-shadow: 0 0 0 1px rgba(53, 72, 91, 0.07), 0 2px 2px rgba(0, 0, 0, 0.01), 0 4px 4px rgba(0, 0, 0, 0.02), 0 10px 8px rgba(0, 0, 0, 0.03), 0 15px 15px rgba(0, 0, 0, 0.03), 0 30px 30px rgba(0, 0, 0, 0.04), 0 70px 65px rgba(0, 0, 0, 0.05);
   -webkit-box-shadow: 0 0 0 1px rgba(53, 72, 91, 0.07), 0 2px 2px rgba(0, 0, 0, 0.01), 0 4px 4px rgba(0, 0, 0, 0.02), 0 10px 8px rgba(0, 0, 0, 0.03), 0 15px 15px rgba(0, 0, 0, 0.03), 0 30px 30px rgba(0, 0, 0, 0.04), 0 70px 65px rgba(0, 0, 0, 0.05);
   -moz-box-shadow: 0 0 0 1px rgba(53, 72, 91, 0.07), 0 2px 2px rgba(0, 0, 0, 0.01), 0 4px 4px rgba(0, 0, 0, 0.02), 0 10px 8px rgba(0, 0, 0, 0.03), 0 15px 15px rgba(0, 0, 0, 0.03), 0 30px 30px rgba(0, 0, 0, 0.04), 0 70px 65px rgba(0, 0, 0, 0.05);
-  border: solid;
+  --webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
   border-radius: 6px;
+  border: solid;
   border-color: var(--border-color);
   border-width: 0.01em;
 }
 
 /**************************** PROJECTS *****************************/
+.nextProject {
+  margin-left: auto;
+  /* https://freefrontend.com/css-image-effects/ */
+  box-shadow: 0 0 0 1px rgba(53, 72, 91, 0.07), 0 2px 2px rgba(0, 0, 0, 0.01), 0 4px 4px rgba(0, 0, 0, 0.02), 0 10px 8px rgba(0, 0, 0, 0.03), 0 15px 15px rgba(0, 0, 0, 0.03), 0 30px 30px rgba(0, 0, 0, 0.04), 0 70px 65px rgba(0, 0, 0, 0.05);
+  -webkit-box-shadow: 0 0 0 1px rgba(53, 72, 91, 0.07), 0 2px 2px rgba(0, 0, 0, 0.01), 0 4px 4px rgba(0, 0, 0, 0.02), 0 10px 8px rgba(0, 0, 0, 0.03), 0 15px 15px rgba(0, 0, 0, 0.03), 0 30px 30px rgba(0, 0, 0, 0.04), 0 70px 65px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: 0 0 0 1px rgba(53, 72, 91, 0.07), 0 2px 2px rgba(0, 0, 0, 0.01), 0 4px 4px rgba(0, 0, 0, 0.02), 0 10px 8px rgba(0, 0, 0, 0.03), 0 15px 15px rgba(0, 0, 0, 0.03), 0 30px 30px rgba(0, 0, 0, 0.04), 0 70px 65px rgba(0, 0, 0, 0.05);
+  --webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  border: solid;
+  border-color: var(--border-color);
+  border-width: 0.01em;
+  padding-left: 1em;
+  padding-right: 1em;
+  margin-bottom: 1em;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.nextProject a {
+  text-decoration: none;
+  color: white;
+}
+
+.heroCaption {
+  margin-left: auto;
+  font-size: 18px;
+}
+
 .writeUp {
   margin-top: 3em;
   margin-bottom: 2em;
@@ -674,12 +737,13 @@ textarea {
   flex-direction: row;
 }
 
-.projSection h1 {
+.projSection h1,
+.projSection h3 {
   width: 100%;
 }
 
 .projSection p {
-  width: 65%;
+  width: 60%;
   margin: 0;
   margin-bottom: 1.5em;
 }
@@ -687,8 +751,10 @@ textarea {
 .projSection .comments {
   width: 25%;
   margin-left: auto;
-  font-family: serif;
-  color: #00834c;
+  font-family: "Roboto Mono", monospace;
+  color: var(--lightish-blue);
+  font-size: 18px;
+  margin-left: auto;
 }
 
 .projGrid {
@@ -719,8 +785,10 @@ textarea {
   box-shadow: 0 0 0 1px rgba(53, 72, 91, 0.07), 0 2px 2px rgba(0, 0, 0, 0.01), 0 4px 4px rgba(0, 0, 0, 0.02), 0 10px 8px rgba(0, 0, 0, 0.03), 0 15px 15px rgba(0, 0, 0, 0.03), 0 30px 30px rgba(0, 0, 0, 0.04), 0 70px 65px rgba(0, 0, 0, 0.05);
   -webkit-box-shadow: 0 0 0 1px rgba(53, 72, 91, 0.07), 0 2px 2px rgba(0, 0, 0, 0.01), 0 4px 4px rgba(0, 0, 0, 0.02), 0 10px 8px rgba(0, 0, 0, 0.03), 0 15px 15px rgba(0, 0, 0, 0.03), 0 30px 30px rgba(0, 0, 0, 0.04), 0 70px 65px rgba(0, 0, 0, 0.05);
   -moz-box-shadow: 0 0 0 1px rgba(53, 72, 91, 0.07), 0 2px 2px rgba(0, 0, 0, 0.01), 0 4px 4px rgba(0, 0, 0, 0.02), 0 10px 8px rgba(0, 0, 0, 0.03), 0 15px 15px rgba(0, 0, 0, 0.03), 0 30px 30px rgba(0, 0, 0, 0.04), 0 70px 65px rgba(0, 0, 0, 0.05);
-  border: solid;
+  --webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
   border-radius: 6px;
+  border: solid;
   border-color: var(--border-color);
   border-width: 0.01em;
 }
@@ -735,7 +803,8 @@ textarea {
 }
 
 /************************** ANIMATIONS ************************/
-.navbar ul li:hover {
+.navbar ul li:hover,
+.nextProject a:hover {
   text-decoration: underline;
 }
 
@@ -782,6 +851,10 @@ footer ul li a:hover {
   transform: translateY(-0.3em);
 }
 
+.projectCard.active:hover .seeMore {
+  font-weight: 500;
+}
+
 .projectCard.active:active,
 .bgSelect img:active,
 .chrisImg:active {
@@ -793,19 +866,17 @@ footer ul li a:hover {
 }
 
 /*********************************** MEDIA QUERIES **********************************************************/
-@supports (-webkit-appearance: none) {
-  @media all and (-webkit-min-device-pixel-ratio: 0) and (min-width: 1280px) {
-    .navBorder {
-      right: calc(5.02em + (100vw - 1280px) / 2);
-    }
-  }
-}
-
 @supports (-moz-appearance: meterbar) {
   @media only screen and (min-width: 1280px) {
     .navBorder {
       right: calc(4.52em + (100vw - 1280px) / 2);
     }
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .navBorder {
+    right: calc(4.52em + (100vw - 1280px) / 2);
   }
 }
 
@@ -822,7 +893,6 @@ footer ul li a:hover {
   }
   h1 {
     font-size: 2em;
-    width: 15em;
   }
   .bgSelect img {
     width: 8em;
@@ -845,7 +915,6 @@ footer ul li a:hover {
   }
   h1 {
     font-size: 1.7em;
-    width: 15em;
   }
   .flexHeroLeft p {
     font-size: 0.9em;
@@ -983,6 +1052,10 @@ footer ul li a:hover {
     display: flex;
     flex-direction: column;
     gap: 0.8em;
+  }
+  .navbar ul li:nth-child(4) {
+    /* position: relative; */
+    display: inline-block;
   }
   .navbar.responsive ul a.hamburger {
     /* position: relative; */
