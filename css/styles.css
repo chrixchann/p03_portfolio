@@ -691,13 +691,15 @@ textarea {
 
 .writeUp {
   margin-top: 3em;
-  margin-bottom: 2em;
+  margin-bottom: 5em;
+  padding-bottom: 3.5em;
   font-size: 1.3em;
   padding-left: 4em;
   padding-right: 4em;
   display: flex;
   flex-direction: column;
   gap: 3em;
+  border-bottom: 1px solid #eee;
 }
 
 .writeUp img {
