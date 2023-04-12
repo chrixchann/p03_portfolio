@@ -139,8 +139,6 @@ body,
   padding-top: 3em;
   padding-bottom: 3em;
   white-space: nowrap;
-
-  /* border: solid 2px var(--border-color); */
 }
 
 .navBorder {
@@ -457,9 +455,7 @@ footer .socials {
   gap: 20px;
   width: 100%;
   justify-content: center;
-  // background-color: var(--lightish-blue);
   padding: 2em;
-  // @include defBorder();
   border: 1px solid var(--faded-text);
   border-radius: 8px;
 }
@@ -497,8 +493,8 @@ footer .socials {
 .groupCol pre {
   margin-top: 0;
 }
-
-/* CSS */
+// button-6 style taken from
+// https://getcssscan.com/css-buttons-examples
 .button-6 {
   align-items: center;
   background-color: var(--lightish-blue);
@@ -509,8 +505,6 @@ footer .socials {
   color: rgba(255, 255, 255, 0.85);
   cursor: pointer;
   display: inline-flex;
-  // font-family: system-ui, -apple-system, system-ui, "Helvetica Neue", Helvetica,
-  //   Arial, sans-serif;
   font-size: 16px;
   font-weight: 500;
   justify-content: center;
